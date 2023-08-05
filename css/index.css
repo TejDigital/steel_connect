@@ -1,0 +1,176 @@
+.home_top {
+    position: relative;
+}
+
+.home_top .box {
+    position: relative;
+}
+
+.home_top .box .img {
+    width: 100%;
+    /* max-height: 600px; */
+    height: 100%;
+}
+.home_top .box .img img{
+    width: 100%;
+    /* max-height: 600px; */
+    height: 100%;
+}
+
+
+
+.home_top .box .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.home_top .box .text .main_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home_top .box .text .main_box h1{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 57px;
+    text-align: center;
+}
+.home_top .box .text .main_box h1 p{
+    margin-top: 2rem;
+    font-weight: 500;
+    line-height: 57px;
+
+}
+.home_top .box .text .main_box .address{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_top .box .text .main_box .address p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    letter-spacing: 2%;
+}
+.home_top .box .text .main_box .address p i{
+    color: #FA5A19;
+    margin-right: 1rem;
+}
+.home_top .box .text .main_box .times{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+.home_top .box .text .main_box .times .time_box{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    flex-direction: column;
+    width: 100px;
+    /* aspect-ratio: 1/1; */
+    padding: 0.7rem;
+    height: 100px;
+    background-color: #fff;
+    justify-content: center;
+}
+.home_top .box .text .main_box .times .time_box span:nth-child(1){ 
+    color: #FA5A19;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.home_top .box .text .main_box .times .time_box span:nth-child(2){ 
+    color: #000000;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+/* ---------------------------------------home_2----------------------------------- */
+.home_2{
+    position: relative;
+    padding: 2rem 0;
+}
+.home_2 .down_pdf{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    justify-content: center;
+}
+.home_2 .down_pdf a{
+    padding: 1rem 3rem; 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    border: 2px solid #FA5A19;
+    color: #FA5A19;
+    text-decoration: none;
+}
+.home_2 .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.home_2 .text h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    margin: 1rem 0;
+    
+}
+.home_2 .text b{
+    border-bottom: 1px solid #FA5A19;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+.home_2 .text p{
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+}
+.home_2 .boxes {
+    padding: 1rem 0;
+}
+.home_2 .boxes .box {
+    padding: 1rem;
+}
+.home_2 .boxes .box .img{
+    max-width: 80px;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_2 .boxes .box .img img{
+    width: 100%;
+    height: 100%;
+}
+.home_2 .boxes .box .text {
+    padding: 1rem 0;
+}
+.home_2 .boxes .box .text p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
