@@ -22,3 +22,75 @@ for (let i = 0; i < menuitems.length; i++) {
     menuitems[i].className = "current";
   }
 }
+
+
+  //----------------------------gallery---------------------
+  $(".gallery_slider_area").owlCarousel({
+    autoplay: true,
+    slideSpeed: 1000,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    items: 4,
+    loop: true,
+    // rtl: true,
+    mouseDrag: true,
+    // nav: true,
+    // center:true,
+    navText: [
+      '<i class="fa fa-arrow-left"></i>',
+      '<i class="fa fa-arrow-right"></i>',
+    ],
+    margin: 10,
+    // dots: true,
+    // dotsEach: true,
+    responsive: {
+      320: {
+        items: 1,
+      },
+      767: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  });
+
+
+  //----------------------------Sponsors_slider_area---------------------
+  $(".Sponsors_slider_area").owlCarousel({
+    autoplay: true,
+    slideSpeed: 1000,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    items: 4,
+    loop: true,
+    // rtl: true,
+    mouseDrag: true,
+    // nav: true,
+    // center:true,
+    navText: [
+      '<i class="fa fa-arrow-left"></i>',
+      '<i class="fa fa-arrow-right"></i>',
+    ],
+    margin: 20,
+    dots: false,
+    // dotsEach: true,
+    responsive: {
+      320: {
+        items: 1,
+      },
+      767: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  });

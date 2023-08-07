@@ -55,7 +55,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse navbar_mobile" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto">
+                        <ul class="navbar-nav ms-auto px-5">
                             <li class="nav-item">
                                 <a class="nav-link" href="./index.php">Home <span>/</span></a>
                             </li>
