@@ -262,10 +262,13 @@
         </div>
         <div class="row p-0">
             <div class="col-md-12 p-0">
-                <div class="gallery_slider_area text-center owl-carousel owl-theme">
+                <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
                     <div class="box">
                         <div class="img">
-                            <img src="images/gallery_1.png" alt="">
+                            <a href="images/gallery_1.png" data-lg-size="1600-2400">
+
+                                <img src="images/gallery_1.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="box">

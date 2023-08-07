@@ -94,3 +94,11 @@ for (let i = 0; i < menuitems.length; i++) {
       },
     },
   });
+
+
+  lightGallery(document.getElementById('lightgallery'), {
+    plugins: [lgZoom, lgThumbnail],
+    licenseKey: 'your_license_key',
+    speed: 500,
+    // ... other settings
+});

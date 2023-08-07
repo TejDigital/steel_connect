@@ -88,6 +88,7 @@ body {
 	font-weight: 600;
 	color: #ffffff;
 	transition: 0.15s ease;
+	padding: 1rem;
 }
 .nav-item .nav-link span{
 	color: #FA5A19;
@@ -128,6 +129,7 @@ body {
 
 .nav-item a::after {
 	content: '';
+	margin: auto;
 	transition: 0.5s;
 	position: absolute;
 	left: 0;
@@ -142,8 +144,9 @@ body {
 }
 
 .nav-item a:hover::after {
-	width: 100%;
+	width: 80%;
 	/* height: 100%; */
+	margin: auto;
 	z-index: -1;
 }
 
