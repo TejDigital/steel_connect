@@ -265,30 +265,33 @@
                 <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
                     <div class="box">
                         <div class="img">
-                            <a href="images/gallery_1.png" data-lg-size="1600-2400">
-
                                 <img src="images/gallery_1.png" alt="">
+                                <a href="images/gallery_1.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                             </a>
                         </div>
                     </div>
                     <div class="box">
                         <div class="img">
                             <img src="images/gallery_2.png" alt="">
+                            <a href="images/gallery_2.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                         </div>
                     </div>
                     <div class="box">
                         <div class="img">
                             <img src="images/gallery_3.png" alt="">
+                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                         </div>
                     </div>
                     <div class="box">
                         <div class="img">
                             <img src="images/gallery_4.png" alt="">
+                            <a href="images/gallery_4.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                         </div>
                     </div>
                     <div class="box">
                         <div class="img">
                             <img src="images/gallery_3.png" alt="">
+                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +343,7 @@
     <div class="container">
         <div class="row footer_flex">
             <div class="col-md-8">
-                <h1>Copyright 2023 reserved by <span>Steel Connect</span> | Designed and managed by <span><a href="#">Digitalshakha</a></span></h1>
+                <h1>Copyright <?= date('Y')?> reserved by <span> <a href="https://steeltradeinfo.com/">Steel Connect</a></span> | Designed and managed by <span><a href="https://www.digitalshakha.in">Digitalshakha</a></span></h1>
             </div>
             <div class="col-md-4">
                 <div class="social_imgs">

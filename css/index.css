@@ -133,7 +133,7 @@
 /* ---------------------------------------home_2----------------------------------- */
 .home_2{
     position: relative;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 .home_2 .down_pdf{
     position: relative;
@@ -504,7 +504,22 @@
     width: 100%;
     max-width: 300px;
     height: 100%;
+    position: relative;
 }
+.home_gallery .box .img a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    font-size: 1.3rem;
+    /* display: none; */
+    transition: all .2s ease-in-out;
+    transition-delay: 0.6s;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #FA5A19;
+}
+
 .home_gallery .box .img img{
     width: 100%;
     height: 100%;
@@ -584,6 +599,10 @@ footer h1{
 }
 footer h1 span{
     font-weight: 700;
+}
+footer h1 span a{
+    text-decoration: none;
+    color: #000000;
 }
 footer .social_imgs {
     display: flex;
