@@ -61,24 +61,111 @@ for (let i = 0; i < menuitems.length; i++) {
 
 
   //----------------------------Sponsors_slider_area---------------------
-  $(".Sponsors_slider_area").owlCarousel({
+  $(".Sponsors_slider_area_1").owlCarousel({
     autoplay: true,
     slideSpeed: 1000,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     items: 4,
     loop: true,
-    // rtl: true,
-    mouseDrag: true,
-    // nav: true,
-    // center:true,
+ mouseDrag: true,
+  
     navText: [
       '<i class="fa fa-arrow-left"></i>',
       '<i class="fa fa-arrow-right"></i>',
     ],
     margin: 20,
     dots: false,
-    // dotsEach: true,
+    responsive: {
+      320: {
+        items: 1,
+      },
+      767: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  });
+  $(".Sponsors_slider_area_2").owlCarousel({
+    autoplay: true,
+    slideSpeed: 1000,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    items: 4,
+    loop: true,
+    mouseDrag: true,
+  
+    navText: [
+      '<i class="fa fa-arrow-left"></i>',
+      '<i class="fa fa-arrow-right"></i>',
+    ],
+    margin: 20,
+    dots: false,
+    responsive: {
+      320: {
+        items: 1,
+      },
+      767: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  });
+  $(".Sponsors_slider_area_3").owlCarousel({
+    autoplay: true,
+    slideSpeed: 1000,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    items: 4,
+    loop: true,
+    mouseDrag: true,
+  
+    navText: [
+      '<i class="fa fa-arrow-left"></i>',
+      '<i class="fa fa-arrow-right"></i>',
+    ],
+    margin: 20,
+    dots: false,
+    responsive: {
+      320: {
+        items: 1,
+      },
+      767: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  });
+  $(".Sponsors_slider_area_4").owlCarousel({
+    autoplay: true,
+    slideSpeed: 1000,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    items: 4,
+    loop: true,
+    mouseDrag: true,
+  
+    navText: [
+      '<i class="fa fa-arrow-left"></i>',
+      '<i class="fa fa-arrow-right"></i>',
+    ],
+    margin: 20,
+    dots: false,
     responsive: {
       320: {
         items: 1,

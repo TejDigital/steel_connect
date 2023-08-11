@@ -142,6 +142,189 @@
         </div>
     </div>
 </section>
+<section class="home_sponsors">
+    <div class="container">
+        <div class="text">
+            <h1>Sponsors</h1>
+            <b></b>
+            <p>Meet the Valued Sponsors Behind the Success of Steel Connect.</p>
+        </div>
+            <div class="row p-0 sponsor_box">
+                <div class="col-md-12 p-0">
+                    <h2>Platinum Sponsors</h2>
+                    <div class="Sponsors_slider_area_1 text-center owl-carousel owl-theme">
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_4.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 sponsor_box">
+                <div class="col-md-12 p-0">
+                    <h2>Silver Sponsors</h2>
+                    <div class="Sponsors_slider_area_2 text-center owl-carousel owl-theme">
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_4.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 sponsor_box">
+                <div class="col-md-12 p-0">
+                    <h2>Associate Sponsors</h2>
+                    <div class="Sponsors_slider_area_3 text-center owl-carousel owl-theme">
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_4.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 sponsor_box">
+                <div class="col-md-12 p-0">
+                    <h2>Digital Partners</h2>
+                    <div class="Sponsors_slider_area_4 text-center owl-carousel owl-theme">
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_4.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="images/sponsor_3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<section class="home_gallery">
+    <div class="container">
+        <div class="text">
+            <h1>Gallery</h1>
+            <b></b>
+            <p>Browse Through a Visual Journey</p>
+        </div>
+        <div class="row p-0">
+            <div class="col-md-12 p-0">
+                <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
+                    <div class="box">
+                        <div class="img">
+                            <img src="images/gallery_1.png" alt="">
+                            <a href="images/gallery_1.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <img src="images/gallery_2.png" alt="">
+                            <a href="images/gallery_2.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <img src="images/gallery_3.png" alt="">
+                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <img src="images/gallery_4.png" alt="">
+                            <a href="images/gallery_4.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="img">
+                            <img src="images/gallery_3.png" alt="">
+                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="home_schedule">
     <div class="container">
         <div class="row">
@@ -153,7 +336,6 @@
         </div>
         <div class="timing_col">
             <div class="times">
-
                 <p>
                     <span>08:00 AM</span>: Opening of Registration Desk
                 </p>
@@ -202,7 +384,6 @@
     </div>
     <div class="container-fluid p-0">
         <div class="img">
-
             <img src="images/Schedules_img.png" alt="">
         </div>
     </div>
@@ -215,7 +396,7 @@
             <p>Reserve Your Spot Today and Unlock Access to Steel Connect's <br> Networking and Business Opportunities.</p>
         </div>
         <div class="inputs">
-            <div class="row">
+            <div class="row px-2">
                 <div class="col-md-6 p-0">
                     <div class="form">
                         <form action="">
@@ -253,97 +434,13 @@
         </div>
     </div>
 </section>
-<section class="home_gallery">
-    <div class="container">
-        <div class="text">
-            <h1>Gallery</h1>
-            <b></b>
-            <p>Browse Through a Visual Journey</p>
-        </div>
-        <div class="row p-0">
-            <div class="col-md-12 p-0">
-                <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
-                    <div class="box">
-                        <div class="img">
-                                <img src="images/gallery_1.png" alt="">
-                                <a href="images/gallery_1.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_2.png" alt="">
-                            <a href="images/gallery_2.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_3.png" alt="">
-                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_4.png" alt="">
-                            <a href="images/gallery_4.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_3.png" alt="">
-                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="home_sponsors">
-    <div class="container">
-        <div class="text">
-            <h1>Sponsors</h1>
-            <b></b>
-            <p>Meet the Valued Sponsors Behind the Success of Steel Connect.</p>
-        </div>
-        <div class="row p-0">
-            <div class="col-md-12 p-0">
-                <div class="Sponsors_slider_area text-center owl-carousel owl-theme">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_1.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_4.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
 <footer>
     <div class="container">
         <div class="row footer_flex">
             <div class="col-md-8">
-                <h1>Copyright <?= date('Y')?> reserved by <span> <a href="https://steeltradeinfo.com/">Steel Connect</a></span> | Designed and managed by <span><a href="https://www.digitalshakha.in">Digitalshakha</a></span></h1>
+                <h1>Copyright <?= date('Y') ?> reserved by <span> <a href="https://steeltradeinfo.com/">Steel Connect</a></span> | Designed and managed by <span><a href="https://www.digitalshakha.in">Digitalshakha</a></span></h1>
             </div>
             <div class="col-md-4">
                 <div class="social_imgs">

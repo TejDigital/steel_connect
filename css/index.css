@@ -360,6 +360,10 @@
 }
 
 
+.home_schedule .timing_col .times{
+    padding-bottom: 6rem;
+}
+
 .home_schedule .timing_col .times p{
     font-size: 1.9rem;
     font-weight: 500;
@@ -529,10 +533,21 @@
 .home_sponsors{
     position: relative;
     padding: 2rem;
-    background: url(../images/home_sponsors.png);
+    background: url(../images/sponsor_bg_1.png);
     background-size: cover;
     background-position: center;
 }
+.home_sponsors .sponsor_box{
+    margin-bottom: 2rem;
+} 
+.home_sponsors .sponsor_box h2{
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+} 
+
 .home_sponsors .text{
     padding: 1rem;
     display: flex;
