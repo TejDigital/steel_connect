@@ -1,0 +1,132 @@
+/* ---------------------------------sponsors_sponsors------------- */
+.sponsors_sponsors{
+    position: relative;
+    padding: 2rem;
+    /* background: url(../images/sponsor_bg_1.png); */
+    background-size: cover;
+    background-position: center;
+}
+.sponsors_sponsors .sponsor_box{
+    margin-bottom: 2rem;
+} 
+.sponsors_sponsors .sponsor_box h2{
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+} 
+
+.sponsors_sponsors .text{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    flex-direction: column;
+    position: relative;
+}
+.sponsors_sponsors .text h1{
+    font-size: 2.3rem;
+   font-weight: 900;
+   line-height: 49px;
+   text-align: center;
+}
+.sponsors_sponsors .text b{
+    border-bottom: 1px solid #FA5A19;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.sponsors_sponsors .text p{
+    /* width: 80%; */
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+} 
+.sponsors_sponsors .Sponsors_slider_area{
+ padding: 2rem 0;
+}
+.sponsors_sponsors .box{
+    background-color: #F5F5F5;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.sponsors_sponsors .box .img img{
+    max-width: 150px;
+    aspect-ratio: 2/1;
+}
+
+
+/* ------------------------------------------------------ */
+.sponsor_end{
+    padding: 2rem 0;
+    position: relative;
+}
+.sponsor_end .head_text{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    flex-direction: column;
+    position: relative;
+}
+.sponsor_end .head_text h1{
+    font-size: 2.3rem;
+   font-weight: 800;
+   line-height: 49px;
+   text-align: center;
+}
+.sponsor_end .head_text b{
+    border-bottom: 1px solid #FA5A19;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sponsor_end .body_text {
+    position: relative;
+}
+.sponsor_end .body_text p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
+.sponsor_end .body_text p span{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    color: #4C81B6;
+}
+.sponsor_end .foot_text{
+    margin-top: 2rem;
+    position: relative;
+    text-align: center;
+}
+.sponsor_end .foot_text a{
+    text-align: center;
+    border: 2px solid #FA5A19;
+    color: #FA5A19;
+    padding: 1rem 4rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+.sponsor_end .foot_text a:hover{
+   border: 2px solid transparent;
+   background-color: #FA5A19;
+   color: #fff;
+}

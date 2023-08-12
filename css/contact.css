@@ -1,0 +1,50 @@
+.contact_links{
+    position: relative;
+    padding: 2rem 0;
+}
+.contact_links .col-md-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact_links .box{
+    border: 1px solid #005595;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 100%;
+    padding: 1rem;
+}
+.contact_links .box .icon{
+   position: relative;
+   margin-bottom: 2rem;
+   font-size: 4rem;
+}
+.contact_links .box .icon a{
+   text-align: center;
+   color: #005595;
+   text-decoration: none;
+}
+.contact_links .box .text {
+   text-align: center;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.contact_links .box .text p{
+   font-size: 1.3rem;
+   font-weight: 500;
+   margin: 0;
+   line-height: 30px;
+}
+.contact_links .box .text p a{
+   text-decoration: none;
+   color: #005595;
+}

@@ -183,6 +183,28 @@ for (let i = 0; i < menuitems.length; i++) {
   });
 
 
+  // -----------------------slick-carousel-for-gallery----------------
+$(".slider-single").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: true,
+  arrows: false,
+  asNavFor: ".slider-nav",
+});
+
+$(".slider-nav").slick({
+  slidesToShow: 5,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: true,
+  asNavFor: ".slider-single",
+  focusOnSelect: true,
+  centerMode: true,
+});
+
 
 
 

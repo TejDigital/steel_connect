@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/ticket.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/program.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/sponsors.css">
+    <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/fancybox.min.css">
 </head>
@@ -64,19 +72,19 @@
                                 <a class="nav-link" href="./about.php">About <span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./services.php">Speakers <span>/</span></a>
+                                <a class="nav-link" href="./speaker.php">Speakers <span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./services.php">Sponsor <span>/</span></a>
+                                <a class="nav-link" href="./sponsor.php">Sponsor<span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./contact.php">Program <span>/</span></a>
+                                <a class="nav-link" href="./program.php">Program <span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./contact.php">Tickets <span>/</span></a>
+                                <a class="nav-link" href="./ticket.php">Tickets <span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./contact.php">Gallery <span>/</span></a>
+                                <a class="nav-link" href="./gallery.php">Gallery <span>/</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./contact.php">Contact <span>/</span></a>
