@@ -1,4 +1,6 @@
-<?php require('./includes/header.php') ?>
+<?php require('./includes/header.php');
+require('./admin/config/dbcon.php');
+?>
 <section class="top_hero">
     <div class="img">
         <img src="./images/about_bg_1.png" alt="">
@@ -20,31 +22,22 @@
             <div class="col-md-12 p-0">
                 <h2>Platinum Sponsors</h2>
                 <div class="Sponsors_slider_area_1 text-center owl-carousel owl-theme">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_1.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_4.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
+                    <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '1' And spo_status = '1'";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                   
                 </div>
             </div>
         </div>
@@ -52,31 +45,21 @@
             <div class="col-md-12 p-0">
                 <h2>Silver Sponsors</h2>
                 <div class="Sponsors_slider_area_2 text-center owl-carousel owl-theme">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_1.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_4.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
+                <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '2' And spo_status = '1'";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -84,31 +67,21 @@
             <div class="col-md-12 p-0">
                 <h2>Associate Sponsors</h2>
                 <div class="Sponsors_slider_area_3 text-center owl-carousel owl-theme">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_1.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_4.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
+                <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '3' And spo_status = '1' ";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -116,31 +89,21 @@
             <div class="col-md-12 p-0">
                 <h2>Digital Partners</h2>
                 <div class="Sponsors_slider_area_4 text-center owl-carousel owl-theme">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_1.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_4.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/sponsor_3.svg" alt="">
-                        </div>
-                    </div>
+                <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '4' And spo_status = '1'";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

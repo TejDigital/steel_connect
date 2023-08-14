@@ -23,12 +23,25 @@ for (let i = 0; i < menuitems.length; i++) {
   }
 }
 
+// ----------------number_validation-----------------------
+function validateNumber(elem, alertId) {
+  if (isNaN(elem.value)) {
+    document.getElementById(alertId).innerHTML = " * Enter Only Number";
+  } else {
+    document.getElementById(alertId).innerHTML = "";
+
+    if (elem.value.length > 10 || elem.value.length < 10) {
+      document.getElementById(alertId).innerHTML = "* Enter Only 10 digits";
+    }
+  }
+}
+
 
   //----------------------------gallery---------------------
   $(".gallery_slider_area").owlCarousel({
-    autoplay: true,
-    slideSpeed: 1000,
-    autoplayTimeout: 2000,
+    // autoplay: true,
+    // slideSpeed: 1000,
+    // autoplayTimeout: 2000,
     autoplayHoverPause: true,
     items: 4,
     loop: true,
@@ -81,7 +94,7 @@ for (let i = 0; i < menuitems.length; i++) {
         items: 1,
       },
       767: {
-        items: 2,
+        items: 3,
       },
       600: {
         items: 3,
@@ -110,12 +123,13 @@ for (let i = 0; i < menuitems.length; i++) {
       320: {
         items: 1,
       },
-      767: {
+      600: {
         items: 2,
       },
-      600: {
+      767: {
         items: 3,
       },
+      
       1000: {
         items: 4,
       },
@@ -140,12 +154,13 @@ for (let i = 0; i < menuitems.length; i++) {
       320: {
         items: 1,
       },
-      767: {
+      600: {
         items: 2,
       },
-      600: {
+      767: {
         items: 3,
       },
+      
       1000: {
         items: 4,
       },
@@ -170,12 +185,13 @@ for (let i = 0; i < menuitems.length; i++) {
       320: {
         items: 1,
       },
-      767: {
+      600: {
         items: 2,
       },
-      600: {
+      767: {
         items: 3,
       },
+      
       1000: {
         items: 4,
       },

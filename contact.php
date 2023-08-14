@@ -1,4 +1,8 @@
-<?php require('./includes/header.php') ?>
+<?php
+ session_start();
+ require('./includes/header.php');
+ require('./admin/config/dbcon.php');
+ ?>
 <section class="top_hero">
     <div class="img">
         <img src="./images/about_bg_1.png" alt="">
@@ -16,32 +20,41 @@
             <b></b>
             <p>Reserve Your Spot Today and Unlock Access to Steel Connect's <br> Networking and Business Opportunities.</p>
         </div>
+        <?php
+        if (isset($_SESSION['steel_msg'])) {
+            echo "<script>alert('" . $_SESSION['steel_msg'] . "')</script>";
+            unset($_SESSION['steel_msg']);
+        }
+        ?>
         <div class="inputs">
             <div class="row px-2">
                 <div class="col-md-6 p-0">
                     <div class="form">
-                        <form action="">
+                        <form action="./admin/connect.php" method="post">
                             <div class="input_box">
-                                <input type="text" name="name" placeholder="Your name" class="input_area">
+                                <input type="text" name="name" placeholder="Your name" class="input_area"  onkeypress="return (event.charCode > 64 && 
+                              event.charCode < 91) || (event.charCode > 96 && event.charCode < 123 || event.charCode == 32)">
                             </div>
                             <div class="input_box">
-                                <input type="number" name="name" placeholder="Your Contact Number" class="input_area">
+                            <span id="msg_alert1" style="color:red;"></span>
+                                <input type="tel" maxlength="10" onkeyup="validateNumber(this,'msg_alert1')" name="phone" placeholder="Your Contact Number" class="input_area">
                             </div>
                             <div class="input_box">
-                                <input type="email" name="name" placeholder="Your Email Address" class="input_area">
+                                <input type="email" name="email" placeholder="Your Email Address" class="input_area">
                             </div>
                             <div class="input_box">
-                                <select name="select" id="" class="input_area">
-                                    <option value="">SELECT</option>
-                                    <option value="">SELECT</option>
-                                    <option value="">SELECT</option>
+                                <select name="select_opt" id="" class="input_area">
+                                    <option value="SELECT">SELECT</option>
+                                    <option value="DELEGATE">DELEGATE</option>
+                                    <option value="EXHIBITION">EXHIBITION</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                             <div class="input_box">
                                 <textarea name="message" class="input_area" id="" cols="30" rows="5"></textarea>
                             </div>
                             <div class="sub_btn">
-                                <button class="btn1">Submit Form</button>
+                                <button type="submit" name="submit" class="btn1">Submit Form</button>
                             </div>
                         </form>
                     </div>

@@ -1,4 +1,7 @@
-<?php require('./includes/header.php') ?>
+<?php require('./includes/header.php');
+require('./admin/config/dbcon.php');
+
+ ?>
 <section class="top_hero">
     <div class="img">
         <img src="./images/about_bg_1.png" alt="">
@@ -17,39 +20,27 @@
             <p>Engage with Industry Pioneers and Visionaries: Meet the Speakers Who Illuminate the Path Forward.</p>
         </div>
         <div class="row">
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="img">
-                        <img src="images/profile_1.png" alt="">
+            <?php
+            $sql = "SELECT * FROM speakers_tbl WHERE s_status = '1'";
+            $query = mysqli_query($con, $sql);
+            if (mysqli_num_rows($query)) {
+                while ($data = mysqli_fetch_assoc($query)) {
+            ?>
+                    <div class="col-md-4 p-2">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./admin/speakers_images/<?=$data['s_img']?>" alt="">
+                            </div>
+                            <div class="bottom_text">
+                                <h1><?=$data['s_name']?></h1>
+                                <p><?=$data['s_position']?></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bottom_text">
-                        <h1>Abc Kumar</h1>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="img">
-                        <img src="images/profile_2.png" alt="">
-                    </div>
-                    <div class="bottom_text">
-                        <h1>Abc Kumar</h1>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="img">
-                        <img src="images/profile_3.png" alt="">
-                    </div>
-                    <div class="bottom_text">
-                        <h1>Abc Kumar</h1>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                }
+            }
+            ?>
         </div>
     </div>
 </section>

@@ -1,4 +1,6 @@
-<?php require('./includes/header.php') ?>
+<?php require('./includes/header.php') ;
+require('./admin/config/dbcon.php');
+?>
 <section class="top_hero">
     <div class="img">
         <img src="./images/about_bg_1.png" alt="">
@@ -112,37 +114,25 @@
         <div class="row p-0">
             <div class="col-md-12 p-0">
                 <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_1.png" alt="">
-                            <a href="images/gallery_1.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_2.png" alt="">
-                            <a href="images/gallery_2.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_3.png" alt="">
-                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_4.png" alt="">
-                            <a href="images/gallery_4.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/gallery_3.png" alt="">
-                            <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
+                    <?php
+                    $sql = "SELECT * FROM img_tbl WHERE status = '1'";
+                    $query = mysqli_query($con, $sql);
+
+                    if (mysqli_num_rows($query)) {
+                        while ($data = mysqli_fetch_assoc($query)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/admin_img_upload/<?= $data['img_name'] ?>" alt="">
+                                    <a href="./admin/admin_img_upload/<?= $data['img_name'] ?>" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                                    </a>
+                                </div>
+                            </div>
+
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

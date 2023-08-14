@@ -1,9 +1,40 @@
-<?php require('./includes/header.php') ?>
+<?php
+session_start();
+require('./includes/header.php');
+require('./admin/config/dbcon.php');
+?>
 <section class="home_top">
     <div class="box">
-        <div class="img">
-            <img src="images/home_bg_1.png" alt="">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="img">
+                        <img src="images/home_bg_1.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img">
+                        <img src="images/home_bg_2.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img">
+                        <img src="images/home_bg_3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+        <!-- <div class="img">
+            <img src="images/home_bg_1.png" alt="">
+        </div> -->
         <div class="text">
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-between">
@@ -106,177 +137,126 @@
             <p>Engage with Industry Pioneers and Visionaries: Meet the Speakers Who Illuminate the Path Forward.</p>
         </div>
         <div class="row">
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="img">
-                        <img src="images/profile_1.png" alt="">
+            <?php
+            $sql = "SELECT * FROM speakers_tbl WHERE s_status = '1'";
+            $query = mysqli_query($con, $sql);
+            if (mysqli_num_rows($query)) {
+                while ($data = mysqli_fetch_assoc($query)) {
+            ?>
+                    <div class="col-md-4 p-2">
+                        <div class="box">
+                            <div class="img">
+                                <img src="./admin/speakers_images/<?=$data['s_img']?>" alt="">
+                            </div>
+                            <div class="bottom_text">
+                                <h1><?=$data['s_name']?></h1>
+                                <p><?=$data['s_position']?></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bottom_text">
-                        <h1>Abc Kumar</h1>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="img">
-                        <img src="images/profile_2.png" alt="">
-                    </div>
-                    <div class="bottom_text">
-                        <h1>Abc Kumar</h1>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="img">
-                        <img src="images/profile_3.png" alt="">
-                    </div>
-                    <div class="bottom_text">
-                        <h1>Abc Kumar</h1>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                }
+            }
+            ?>
         </div>
     </div>
 </section>
 <section class="home_sponsors">
-    <div class="container">
+<div class="container">
         <div class="text">
             <h1>Sponsors</h1>
             <b></b>
             <p>Meet the Valued Sponsors Behind the Success of Steel Connect.</p>
         </div>
-            <div class="row p-0 sponsor_box">
-                <div class="col-md-12 p-0">
-                    <h2>Platinum Sponsors</h2>
-                    <div class="Sponsors_slider_area_1 text-center owl-carousel owl-theme">
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_1.svg" alt="">
+        <div class="row p-0 sponsor_box">
+            <div class="col-md-12 p-0">
+                <h2>Platinum Sponsors</h2>
+                <div class="Sponsors_slider_area_1 text-center owl-carousel owl-theme">
+                    <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '1' And spo_status = '1'";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_2.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_4.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                   
                 </div>
             </div>
-            <div class="row p-0 sponsor_box">
-                <div class="col-md-12 p-0">
-                    <h2>Silver Sponsors</h2>
-                    <div class="Sponsors_slider_area_2 text-center owl-carousel owl-theme">
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_1.svg" alt="">
+        </div>
+        <div class="row p-0 sponsor_box">
+            <div class="col-md-12 p-0">
+                <h2>Silver Sponsors</h2>
+                <div class="Sponsors_slider_area_2 text-center owl-carousel owl-theme">
+                <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '2' And spo_status = '1'";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_2.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_4.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
-            <div class="row p-0 sponsor_box">
-                <div class="col-md-12 p-0">
-                    <h2>Associate Sponsors</h2>
-                    <div class="Sponsors_slider_area_3 text-center owl-carousel owl-theme">
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_1.svg" alt="">
+        </div>
+        <div class="row p-0 sponsor_box">
+            <div class="col-md-12 p-0">
+                <h2>Associate Sponsors</h2>
+                <div class="Sponsors_slider_area_3 text-center owl-carousel owl-theme">
+                <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '3' And spo_status = '1' ";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_2.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_4.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
-            <div class="row p-0 sponsor_box">
-                <div class="col-md-12 p-0">
-                    <h2>Digital Partners</h2>
-                    <div class="Sponsors_slider_area_4 text-center owl-carousel owl-theme">
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_1.svg" alt="">
+        </div>
+        <div class="row p-0 sponsor_box">
+            <div class="col-md-12 p-0">
+                <h2>Digital Partners</h2>
+                <div class="Sponsors_slider_area_4 text-center owl-carousel owl-theme">
+                <?php
+                    $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '4' And spo_status = '1'";
+                    $query_run = mysqli_query($con, $query);
+                    if (mysqli_num_rows($query_run)) {
+                        while ($data1 = mysqli_fetch_assoc($query_run)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_2.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_4.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="images/sponsor_3.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
+        </div>
     </div>
 </section>
 <section class="home_gallery">
@@ -289,7 +269,26 @@
         <div class="row p-0">
             <div class="col-md-12 p-0">
                 <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
-                    <div class="box">
+                    <?php
+                    $sql = "SELECT * FROM img_tbl WHERE status = '1'";
+                    $query = mysqli_query( $con,$sql);
+                    
+                    if (mysqli_num_rows($query)) {
+                        while ($data = mysqli_fetch_assoc($query)) {
+                    ?>
+                            <div class="box">
+                                <div class="img">
+                                    <img src="./admin/admin_img_upload/<?= $data['img_name']?>" alt="">
+                                    <a href="./admin/admin_img_upload/<?= $data['img_name']?>" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                                    </a>
+                                </div>
+                            </div>
+
+                        <?php
+                        }
+                    }
+                        ?>
+                        <!-- <div class="box">
                         <div class="img">
                             <img src="images/gallery_1.png" alt="">
                             <a href="images/gallery_1.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
@@ -319,11 +318,11 @@
                             <img src="images/gallery_3.png" alt="">
                             <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                         </div>
-                    </div>
+                    </div> -->
+                            </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
 <section class="home_schedule">
     <div class="container">
@@ -388,6 +387,96 @@
         </div>
     </div>
 </section>
+
+<section class="tickets">
+<div class="container">
+        <div class="text">
+            <h1>Tickets</h1>
+            <b></b>
+            <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 box_area_1 p-1">
+                <div class="box box_1">
+                    <div class="head">
+                        <div class="img">
+                            <img src="./images/logo_1.svg" alt="">
+                        </div>
+                        <div class="head_text">
+                            <p class="m-0">PER</p>
+                            <p class="m-0">EARLY<br>DELEGATE</p>
+                        </div>
+                    </div>
+                    <div class="body_text">
+                        <p>For the <span>first 50 attendees only</span> who act swiftly, we present an exclusive Early Arrival Delegate package. This premium package encompasses all event benefits and comes at a remarkable discounted rate</p>
+                        <div class="pricing">
+                            <div class="price m-0">
+                                <p class="">₹</p>
+                                <p class="">5,999*</p>
+                            </div>
+                            <p class="gdt m-0"> + 18% GST</p>
+                        </div>
+                        <div class="foot_text">
+                            <a href="#!">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-1 box_area_1">
+                <div class="box box_2">
+                    <div class="head">
+                        <div class="img">
+                            <img src="./images/logo_1.svg" alt="">
+                        </div>
+                        <div class="head_text">
+                            <p class="m-0">PER</p>
+                            <p class="m-0">EXHIBITION</p>
+                        </div>
+                    </div>
+                    <div class="body_text">
+                        <p>Exhibitors looking to showcase their products and services can choose the Per Exhibition package. This package includes dedicated exhibition space, branding opportunities, and access to the event.</p>
+                        <div class="pricing">
+                            <div class="price m-0">
+                                <p class="">₹</p>
+                                <p class="">49,000*</p>
+                            </div>
+                            <p class="gdt m-0"> + 18% GST</p>
+                        </div>
+                        <div class="foot_text">
+                            <a href="#!">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  p-1 box_area_1">
+                <div class="box box_3">
+                    <div class="head">
+                        <div class="img">
+                            <img src="./images/logo_1.svg" alt="">
+                        </div>
+                        <div class="head_text">
+                            <p class="m-0">PER</p>
+                            <p class="m-0">DELEGATE</p>
+                        </div>
+                    </div>
+                    <div class="body_text">
+                        <p>Attendees can secure their spot at Steel Connect by availing the Per Delegate package. This package includes access to all sessions, networking opportunities, and other event benefits.</p>
+                        <div class="pricing">
+                            <div class="price m-0">
+                                <p class="">₹</p>
+                                <p class="">6,999*</p>
+                            </div>
+                            <p class="gdt m-0"> + 18% GST</p>
+                        </div>
+                        <div class="foot_text">
+                            <a href="#!">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="home_register">
     <div class="container">
         <div class="text">
@@ -395,32 +484,41 @@
             <b></b>
             <p>Reserve Your Spot Today and Unlock Access to Steel Connect's <br> Networking and Business Opportunities.</p>
         </div>
+        <?php
+        if (isset($_SESSION['steel_msg'])) {
+            echo "<script>alert('" . $_SESSION['steel_msg'] . "')</script>";
+            unset($_SESSION['steel_msg']);
+        }
+        ?>
         <div class="inputs">
             <div class="row px-2">
                 <div class="col-md-6 p-0">
                     <div class="form">
-                        <form action="">
+                        <form action="./admin/connect.php" method="post">
                             <div class="input_box">
-                                <input type="text" name="name" placeholder="Your name" class="input_area">
+                                <input type="text" name="name" placeholder="Your name" class="input_area" onkeypress="return (event.charCode > 64 && 
+                              event.charCode < 91) || (event.charCode > 96 && event.charCode < 123 || event.charCode == 32)">
                             </div>
                             <div class="input_box">
-                                <input type="number" name="name" placeholder="Your Contact Number" class="input_area">
+                                <span id="msg_alert2" style="color:red;"></span>
+                                <input type="tel" maxlength="10" onkeyup="validateNumber(this,'msg_alert2')" name="phone" placeholder="Your Contact Number" class="input_area">
                             </div>
                             <div class="input_box">
-                                <input type="email" name="name" placeholder="Your Email Address" class="input_area">
+                                <input type="email" name="email" placeholder="Your Email Address" class="input_area">
                             </div>
                             <div class="input_box">
-                                <select name="select" id="" class="input_area">
+                                <select name="select_opt" id="" class="input_area">
                                     <option value="">SELECT</option>
-                                    <option value="">SELECT</option>
-                                    <option value="">SELECT</option>
+                                    <option value="DELEGATE">DELEGATE</option>
+                                    <option value="EXHIBITION">EXHIBITION</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                             <div class="input_box">
                                 <textarea name="message" class="input_area" id="" cols="30" rows="5"></textarea>
                             </div>
                             <div class="sub_btn">
-                                <button class="btn1">Submit Form</button>
+                                <button type="submit" name="submit2" class="btn1">Submit Form</button>
                             </div>
                         </form>
                     </div>
