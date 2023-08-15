@@ -146,11 +146,11 @@ require('./admin/config/dbcon.php');
                     <div class="col-md-4 p-2">
                         <div class="box">
                             <div class="img">
-                                <img src="./admin/speakers_images/<?=$data['s_img']?>" alt="">
+                                <img src="./admin/speakers_images/<?= $data['s_img'] ?>" alt="">
                             </div>
                             <div class="bottom_text">
-                                <h1><?=$data['s_name']?></h1>
-                                <p><?=$data['s_position']?></p>
+                                <h1><?= $data['s_name'] ?></h1>
+                                <p><?= $data['s_position'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ require('./admin/config/dbcon.php');
     </div>
 </section>
 <section class="home_sponsors">
-<div class="container">
+    <div class="container">
         <div class="text">
             <h1>Sponsors</h1>
             <b></b>
@@ -180,14 +180,14 @@ require('./admin/config/dbcon.php');
                     ?>
                             <div class="box">
                                 <div class="img">
-                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                    <img src="./admin/sponsor_images/<?= $data1['spo_img'] ?>" alt="">
                                 </div>
                             </div>
                     <?php
                         }
                     }
                     ?>
-                   
+
                 </div>
             </div>
         </div>
@@ -195,7 +195,7 @@ require('./admin/config/dbcon.php');
             <div class="col-md-12 p-0">
                 <h2>Silver Sponsors</h2>
                 <div class="Sponsors_slider_area_2 text-center owl-carousel owl-theme">
-                <?php
+                    <?php
                     $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '2' And spo_status = '1'";
                     $query_run = mysqli_query($con, $query);
                     if (mysqli_num_rows($query_run)) {
@@ -203,7 +203,7 @@ require('./admin/config/dbcon.php');
                     ?>
                             <div class="box">
                                 <div class="img">
-                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                    <img src="./admin/sponsor_images/<?= $data1['spo_img'] ?>" alt="">
                                 </div>
                             </div>
                     <?php
@@ -217,7 +217,7 @@ require('./admin/config/dbcon.php');
             <div class="col-md-12 p-0">
                 <h2>Associate Sponsors</h2>
                 <div class="Sponsors_slider_area_3 text-center owl-carousel owl-theme">
-                <?php
+                    <?php
                     $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '3' And spo_status = '1' ";
                     $query_run = mysqli_query($con, $query);
                     if (mysqli_num_rows($query_run)) {
@@ -225,7 +225,7 @@ require('./admin/config/dbcon.php');
                     ?>
                             <div class="box">
                                 <div class="img">
-                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                    <img src="./admin/sponsor_images/<?= $data1['spo_img'] ?>" alt="">
                                 </div>
                             </div>
                     <?php
@@ -239,7 +239,7 @@ require('./admin/config/dbcon.php');
             <div class="col-md-12 p-0">
                 <h2>Digital Partners</h2>
                 <div class="Sponsors_slider_area_4 text-center owl-carousel owl-theme">
-                <?php
+                    <?php
                     $query = "SELECT * FROM sponsors_tbl where spo_cat_id = '4' And spo_status = '1'";
                     $query_run = mysqli_query($con, $query);
                     if (mysqli_num_rows($query_run)) {
@@ -247,7 +247,7 @@ require('./admin/config/dbcon.php');
                     ?>
                             <div class="box">
                                 <div class="img">
-                                    <img src="./admin/sponsor_images/<?=$data1['spo_img']?>" alt="">
+                                    <img src="./admin/sponsor_images/<?= $data1['spo_img'] ?>" alt="">
                                 </div>
                             </div>
                     <?php
@@ -271,24 +271,24 @@ require('./admin/config/dbcon.php');
                 <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
                     <?php
                     $sql = "SELECT * FROM img_tbl WHERE status = '1'";
-                    $query = mysqli_query( $con,$sql);
-                    
+                    $query = mysqli_query($con, $sql);
+
                     if (mysqli_num_rows($query)) {
                         while ($data = mysqli_fetch_assoc($query)) {
                     ?>
                             <div class="box">
                                 <div class="img">
-                                    <img src="./admin/admin_img_upload/<?= $data['img_name']?>" alt="">
-                                    <a href="./admin/admin_img_upload/<?= $data['img_name']?>" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                                    <img src="./admin/admin_img_upload/<?= $data['img_name'] ?>" alt="">
+                                    <a href="./admin/admin_img_upload/<?= $data['img_name'] ?>" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                                     </a>
                                 </div>
                             </div>
 
-                        <?php
+                    <?php
                         }
                     }
-                        ?>
-                        <!-- <div class="box">
+                    ?>
+                    <!-- <div class="box">
                         <div class="img">
                             <img src="images/gallery_1.png" alt="">
                             <a href="images/gallery_1.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
@@ -319,10 +319,10 @@ require('./admin/config/dbcon.php');
                             <a href="images/gallery_3.png" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                         </div>
                     </div> -->
-                            </div>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <section class="home_schedule">
     <div class="container">
@@ -333,8 +333,8 @@ require('./admin/config/dbcon.php');
                 <p>Explore the Timely Sessions and Plan Your Journey: Dive into the <br>Event's Dynamic Schedule</p>
             </div>
         </div>
-        <div class="timing_col">
-            <div class="times">
+        <div class="timing_col ">
+            <!-- <div class="times">
                 <p>
                     <span>08:00 AM</span>: Opening of Registration Desk
                 </p>
@@ -378,7 +378,74 @@ require('./admin/config/dbcon.php');
                     <span>06:15 PM</span>: Closing Speech by Host for Event
                 </p>
 
-            </div>
+            </div> -->
+            <table class="table table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">08:00 AM</th>
+                        <td>Opening of Registration Desk</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:00 AM</th>
+                        <td>National Anthem</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:10 AM</th>
+                        <td>Lighting of Lamp</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:20 AM</th>
+                        <td>Welcome Speech by Host</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:40 AM</th>
+                        <td>Welcome Speech by Steel Trade</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11:00 AM</th>
+                        <td>Speech by Chief Guest</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11:15 AM</th>
+                        <td>Speech by Speaker 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12:00 PM</th>
+                        <td>Speech by Speaker 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12:45 PM</th>
+                        <td>Speech by Speaker 3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">01:30 PM</th>
+                        <td>Closing of Session 1 &amp; Lunch Announcement</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">02:30 PM</th>
+                        <td>Opening Announcement of Session 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">02:35 PM</th>
+                        <td>Commencement of Networking Session</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">06:00 PM</th>
+                        <td>Announcement of Evening Tea &amp; Snacks</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">06:15 PM</th>
+                        <td>Closing Speech by Host for Event</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
     <div class="container-fluid p-0">
@@ -388,8 +455,8 @@ require('./admin/config/dbcon.php');
     </div>
 </section>
 
-<section class="tickets">
-<div class="container">
+<section class="home_ticket">
+    <div class="container">
         <div class="text">
             <h1>Tickets</h1>
             <b></b>
