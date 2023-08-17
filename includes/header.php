@@ -59,10 +59,15 @@
                     <a class="navbar-brand" href="index.php">
                         <img src="images/Logo_1.svg" class="img-fluid">
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
+                    <div class="toggel_btns">
+                    <button class="navbar-toggler toggel_btn1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
                     </button>
 
+                    <button class="navbar-toggler toggel_btn2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
+                    </button>
+                    </div>
                     <div class="collapse navbar-collapse navbar_mobile" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto px-5">
                             <li class="nav-item">

@@ -9,17 +9,17 @@ require('./admin/config/dbcon.php');
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="img">
-                        <img src="images/home_bg_1.png" alt="">
+                        <img src="images/steel_img_7.jpg" alt="">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="img">
-                        <img src="images/home_bg_2.png" alt="">
+                    <img src="images/steel_img_8.jpg" alt="">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="img">
-                        <img src="images/home_bg_3.png" alt="">
+                    <img src="images/steel_img_9.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -50,19 +50,19 @@ require('./admin/config/dbcon.php');
                         </div>
                         <div class="times">
                             <div class="time_box">
-                                <span>4</span>
+                                <span id="current_day"></span>
                                 <span>Days</span>
                             </div>
                             <div class="time_box">
-                                <span>10</span>
+                                <span id="current_hour"></span>
                                 <span>Hours</span>
                             </div>
                             <div class="time_box">
-                                <span>3</span>
+                                <span id="current_minuts"></span>
                                 <span>Minutes</span>
                             </div>
                             <div class="time_box">
-                                <span>21</span>
+                                <span id="current_second"></span>
                                 <span>Seconds</span>
                             </div>
                         </div>
@@ -268,7 +268,7 @@ require('./admin/config/dbcon.php');
         </div>
         <div class="row p-0">
             <div class="col-md-12 p-0">
-                <div class="gallery_slider_area text-center owl-carousel owl-theme" id="lightgallery">
+                <div class="gallery_slider_area owl-carousel owl-theme">
                     <?php
                     $sql = "SELECT * FROM img_tbl WHERE status = '1'";
                     $query = mysqli_query($con, $sql);
@@ -278,8 +278,8 @@ require('./admin/config/dbcon.php');
                     ?>
                             <div class="box">
                                 <div class="img">
-                                    <img src="./admin/admin_img_upload/<?= $data['img_name'] ?>" alt="">
-                                    <a href="./admin/admin_img_upload/<?= $data['img_name'] ?>" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
+                                    <img src="admin/admin_img_upload/<?= $data['img_name'] ?>" alt="">
+                                    <a href="admin/admin_img_upload/<?= $data['img_name'] ?>" data-fancybox="gallery" title="" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                                     </a>
                                 </div>
                             </div>
@@ -379,13 +379,13 @@ require('./admin/config/dbcon.php');
                 </p>
 
             </div> -->
-            <table class="table table table-striped">
-                <thead>
+            <table class="table table table-striped table-hover">
+                <!-- <thead>
                     <tr>
                         <th scope="col">Time</th>
                         <th scope="col">Event</th>
                     </tr>
-                </thead>
+                </thead> -->
                 <tbody>
                     <tr>
                         <th scope="row">08:00 AM</th>

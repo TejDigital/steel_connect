@@ -56,7 +56,7 @@ require('./admin/config/dbcon.php');
             </div>
         </div>
         <div class="timing_col">
-            <div class="times">
+            <!-- <div class="times">
                 <p>
                     <span>08:00 AM</span>: Opening of Registration Desk
                 </p>
@@ -100,7 +100,73 @@ require('./admin/config/dbcon.php');
                     <span>06:15 PM</span>: Closing Speech by Host for Event
                 </p>
 
-            </div>
+            </div> -->
+            <table class="table table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">08:00 AM</th>
+                        <td>Opening of Registration Desk</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:00 AM</th>
+                        <td>National Anthem</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:10 AM</th>
+                        <td>Lighting of Lamp</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:20 AM</th>
+                        <td>Welcome Speech by Host</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:40 AM</th>
+                        <td>Welcome Speech by Steel Trade</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11:00 AM</th>
+                        <td>Speech by Chief Guest</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11:15 AM</th>
+                        <td>Speech by Speaker 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12:00 PM</th>
+                        <td>Speech by Speaker 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12:45 PM</th>
+                        <td>Speech by Speaker 3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">01:30 PM</th>
+                        <td>Closing of Session 1 &amp; Lunch Announcement</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">02:30 PM</th>
+                        <td>Opening Announcement of Session 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">02:35 PM</th>
+                        <td>Commencement of Networking Session</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">06:00 PM</th>
+                        <td>Announcement of Evening Tea &amp; Snacks</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">06:15 PM</th>
+                        <td>Closing Speech by Host for Event</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
