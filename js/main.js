@@ -45,9 +45,9 @@ function validateNumber(elem, alertId) {
 //----------------------------gallery---------------------
 if ($.isFunction($.fn.owlCarousel)) {
   $(".gallery_slider_area").owlCarousel({
-    // autoplay: true,
-    // slideSpeed: 1000,
-    // autoplayTimeout: 2000,
+    autoplay: true,
+    slideSpeed: 1000,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
     items: 4,
     loop: true,
@@ -215,7 +215,7 @@ $(".slider-single").slick({
 $(".slider-nav").slick({
   slidesToShow: 5,
   infinite: true,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000,
   slidesToScroll: 1,
   dots: true,
