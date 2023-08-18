@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2023 at 06:58 AM
+-- Generation Time: Aug 18, 2023 at 09:18 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -43,7 +43,9 @@ CREATE TABLE `contact_tbl` (
 
 INSERT INTO `contact_tbl` (`id`, `name`, `email`, `message`, `phone`, `select_opt`, `created_at`) VALUES
 (1, 'rohan', 'rohan@gmail.com', 'hello', '1234567890', 'DELEGATE', '2023-08-14 06:02:07'),
-(3, 'ashu', 'ashu@gmail.com', 'hello', '9876543211', 'Other', '2023-08-14 06:05:38');
+(3, 'ashu', 'ashu@gmail.com', 'hello', '9876543211', 'Other', '2023-08-14 06:05:38'),
+(5, 'ABC Kumar', 'abc@gmail.com', 'hello', '1234567890', 'EXHIBITION', '2023-08-18 04:33:49'),
+(6, 'ABC ', 'ashu@gmail.com', 'hello', '1234567890', 'EXHIBITION', '2023-08-18 13:26:25');
 
 -- --------------------------------------------------------
 
@@ -63,10 +65,12 @@ CREATE TABLE `img_tbl` (
 --
 
 INSERT INTO `img_tbl` (`id`, `img_name`, `status`, `created_at`) VALUES
-(1, 'gallery_1.png', 1, '2023-08-14 06:13:01'),
-(2, 'gallery_2.png', 1, '2023-08-14 06:18:41'),
-(3, 'gallery_3.png', 1, '2023-08-14 06:18:47'),
-(4, 'gallery_4.png', 1, '2023-08-14 06:18:51');
+(6, 'gallery_img_1.jpg', 1, '2023-08-17 13:07:59'),
+(7, 'gallery_img_2.jpg', 1, '2023-08-17 13:08:11'),
+(8, 'gallery_img_3.jpg', 1, '2023-08-17 13:08:19'),
+(9, 'gallery_img_4.jpg', 1, '2023-08-17 13:08:31'),
+(10, 'gallery_img_5.jpg', 1, '2023-08-17 13:08:40'),
+(11, 'gallery_img_6.jpg', 1, '2023-08-17 13:08:48');
 
 -- --------------------------------------------------------
 
@@ -88,9 +92,9 @@ CREATE TABLE `speakers_tbl` (
 --
 
 INSERT INTO `speakers_tbl` (`s_id`, `s_name`, `s_img`, `s_position`, `s_status`, `created_at`) VALUES
-(1, 'ABC Kumar', 'profile_1.png', 'ceo', 1, '2023-08-14 07:27:58'),
-(2, 'ABC Kumar', 'profile_2.png', 'Founder', 1, '2023-08-14 07:30:07'),
-(4, 'ABC Kumar', 'profile_3.png', 'Manager', 1, '2023-08-14 09:18:59');
+(1, '', 'profile-2.png', '', 1, '2023-08-14 07:27:58'),
+(2, '', 'profile-2.png', '', 1, '2023-08-14 07:30:07'),
+(4, '', 'profile-2.png', '', 1, '2023-08-14 09:18:59');
 
 -- --------------------------------------------------------
 
@@ -138,6 +142,32 @@ INSERT INTO `sponsor_category` (`cat_id`, `cat_name`, `cat_status`, `created_at`
 (2, 'Silver', 1, '2023-08-14 10:22:19'),
 (3, 'Associate', 1, '2023-08-14 10:22:31'),
 (4, 'Digital Partners', 1, '2023-08-14 10:22:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticket_tbl`
+--
+
+CREATE TABLE `ticket_tbl` (
+  `tic_id` int(11) NOT NULL,
+  `tic_name` varchar(50) NOT NULL,
+  `tic_price` int(40) NOT NULL,
+  `tic_gst` int(20) NOT NULL,
+  `tic_status` tinyint(4) NOT NULL,
+  `tic_created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `tic_color` varchar(20) NOT NULL,
+  `tic_text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ticket_tbl`
+--
+
+INSERT INTO `ticket_tbl` (`tic_id`, `tic_name`, `tic_price`, `tic_gst`, `tic_status`, `tic_created_at`, `tic_color`, `tic_text`) VALUES
+(1, 'EARLY DELEGATE', 5999, 18, 1, '2023-08-18 14:10:59', '#005595', '<span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits'),
+(2, 'EXHIBITION', 49000, 18, 1, '2023-08-18 14:11:29', '#893D00', 'For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access'),
+(3, 'DELEGATE', 6999, 18, 1, '2023-08-18 14:11:47', '#555555', '<span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more');
 
 -- --------------------------------------------------------
 
@@ -196,6 +226,12 @@ ALTER TABLE `sponsor_category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `ticket_tbl`
+--
+ALTER TABLE `ticket_tbl`
+  ADD PRIMARY KEY (`tic_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -209,13 +245,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact_tbl`
 --
 ALTER TABLE `contact_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `img_tbl`
 --
 ALTER TABLE `img_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `speakers_tbl`
@@ -234,6 +270,12 @@ ALTER TABLE `sponsors_tbl`
 --
 ALTER TABLE `sponsor_category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `ticket_tbl`
+--
+ALTER TABLE `ticket_tbl`
+  MODIFY `tic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
