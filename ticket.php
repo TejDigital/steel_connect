@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="body_text">
-                        <p>For the <span>first 50 attendees only</span> who act swiftly, we present an exclusive Early Arrival Delegate package. This premium package encompasses all event benefits and comes at a remarkable discounted rate</p>
+                        <p><span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits.</p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
@@ -55,7 +55,9 @@
                         </div>
                     </div>
                     <div class="body_text">
-                        <p>Exhibitors looking to showcase their products and services can choose the Per Exhibition package. This package includes dedicated exhibition space, branding opportunities, and access to the event.</p>
+                        <p>
+                            For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access.
+                        </p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
@@ -81,7 +83,7 @@
                         </div>
                     </div>
                     <div class="body_text">
-                        <p>Attendees can secure their spot at Steel Connect by availing the Per Delegate package. This package includes access to all sessions, networking opportunities, and other event benefits.</p>
+                        <p> <span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more</p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
@@ -107,18 +109,64 @@
         </div>
     </div>
 </section>
-<section class="sponsor_end">
+<section class="ticket_end">
     <div class="container">
         <div class="head_text">
-            <h1>Want To Be Our Sponsors?</h1>
+            <h1>Exhibitor Benefits</h1>
             <b></b>
+            <p>Elevating Your Presence at Steel Connect</p>
         </div>
         <div class="body_text">
-            <p>Sponsoring Steel Connect offers a multitude of advantages, including prominent recognition on event collateral, signage, and digital platforms. Your brand will enjoy enhanced visibility, networking opportunities, and the chance to showcase products and services to a diverse audience. By aligning with this industry-leading event, you'll position your organization as a key player in the iron and steel sector while fostering valuable connections and gaining access to exclusive benefits.</p>
-            <p><span>Elevate your brand's presence and seize unique opportunities by sponsoring Steel Connect, the platform that connects the iron and steel industry's leading players.</span></p>
+            <p class="mb-5">As an exhibitor at Steel Connect, you're at the forefront of the event, and we're dedicated to ensuring that your participation yields exceptional advantages. Here's what you can anticipate as an exhibitor:
+            </p>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="mini_text">
+                        <h3>Strategic Visibility:</h3>
+                        <p>Present your brand prominently in a dedicated 6x6 size stall, fully equipped with a table and chairs for 2+3 individuals.</p>
+                        <p> Leverage your stall's strategic location for optimal exposure to event attendees.</p>
+                    </div>
+                    <div class="mini_text">
+                        <h3>Product Showcase:</h3>
+                        <p>Showcase your products and services in a dedicated space, allowing direct interactions with potential clients and partners.</p>
+                        <p>Conduct impactful product demonstrations and presentations to highlight your offerings' unique features.</p>
+                    </div>
+                    <div class="mini_text">
+                        <h3>Comfort and Convenience:</h3>
+                        <p>Enjoy the convenience of seamless logistics assistance, ensuring smooth transportation from the airport to the venue.</p>
+                        <p>Experience comfortable accommodation on a twin-share basis during the event.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mini_text">
+                        <h3>Engage with Industry Leaders:</h3>
+                        <p>Network with a diverse audience of manufacturers, traders, wholesalers, and industry professionals, fostering valuable connections.</p>
+                    </div>
+                    <div class="mini_text">
+                        <h3>Brand Promotion:</h3>
+                        <p>Gain recognition through exhibitor listings on event signage and materials, further amplifying your brand's presence.
+                        </p>
+                        <p>Utilize complimentary ad space in the event's E-Book to maximize your brand's visibility</p>
+                    </div>
+                    <div class="mini_text">
+                        <h3>Access to Attendee Data:</h3>
+                        <p>Obtain insights by accessing a complete list of event attendees, facilitating post-event engagement and collaboration.</p>
+                    </div>
+                    <div class="mini_text">
+                        <h3>Early Advantage:</h3>
+                        <p>Benefit from the option to secure your spot with the Early Arrival Delegate package at a discounted rate.</p>
+                    </div>
+                </div>
+                <div class="mini_footer_text">
+                    <p>
+                        Being an exhibitor at Steel Connect empowers you to position your brand prominently, engage with key players, and drive business growth. This is your opportunity to shine in the Iron and Steel sector.
+                    </p>
+                    <p><span>For more detailed information on our exhibitor packages, please refer to the attached proposal or reach out to us directly.Thank you for considering this enriching opportunity.</span></p>
+                </div>
+            </div>
         </div>
         <div class="foot_text">
-            <a href="#!">Contact Us</a>
+            <a href="./contact.php">Contact Us</a>
         </div>
     </div>
 </section>

@@ -1,23 +1,32 @@
 $(function () {
   var navbar = $(".header-inner");
-  var top_nav = $(".top_nav");
+  // var top_nav = $(".top_nav");
+  var logo1 = $(".logo1");
+  var logo2 = $(".logo2");
   var togel1 = $(".toggel_btn1");
   var togel2 = $(".toggel_btn2");
   $(window).scroll(function () {
     if ($(window).scrollTop() <= 40) {
-      top_nav.css("display", "block");
+      // top_nav.css("display", "block");
       togel1.css("display", "block");
       togel2.css("display", "none");
+      logo1.css("display", "block");
+      logo2.css("display", "none");
       navbar.removeClass("navbar-scroll");
     } else {
-      top_nav.css("display", "none");
+      // top_nav.css("display", "none");
       togel1.css("display", "none");
       togel2.css("display", "block");
+      logo1.css("display", "none");
+      logo2.css("display", "block");
       navbar.addClass("navbar-scroll");
     }
   });
 });
-
+//-------------location--------------------
+function myloc(){
+  location.href = "https://goo.gl/maps/EDR6HWEbjRcqb64o7";
+}
 //   --------------------------------------------current-page---------------
 
 const currentlink = location.href;
@@ -242,8 +251,8 @@ let second = document.getElementById("current_second");
 // let new_value = date_y.value;
 // const current_time= new_value;
 // Retrieve the target date from local storage or set a default date
-const storedTime = localStorage.getItem("target_date");
-const current_time = storedTime || "02 Oct 2023"; // Change to your default date// console.log(current_time);
+const storedTime = localStorage.getItem("target_new_date");
+const current_time = storedTime || "26 Nov 2023"; // Change to your default date// console.log(current_time);
 function countdown() {
   const newdate = new Date(current_time);
   const currentDate = new Date();
@@ -274,5 +283,5 @@ countdown();
 setInterval(countdown, 1000);
 
 // Store the target date in local storage
-localStorage.setItem("target_date", current_time);
+localStorage.setItem("target_new_date", current_time);
 // }

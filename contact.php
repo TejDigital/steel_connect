@@ -77,9 +77,9 @@
                         <a href="#!"><i class="fa-solid fa-phone-flip"></i></a>
                     </div>
                     <div class="text">
-                        <p><a href="#!">+91000000000</a></p>
-                        <p><a href="#!">+91000000000</a></p>
-                        <p><a href="#!">+91000000000</a></p>
+                        <p><a href="tel:8085485778">+918085485778</a></p>
+                        <p><a href="#!">+918319619939</a></p>
+                        <p><a href="#!">+918602143123</a></p>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                         <a href="#!"><i class="fa-solid fa-location-dot"></i></a>
                     </div>
                     <div class="text">
-                        <p><a href="#!">steet 2, city, state, Pincode</a></p>
+                        <p><a onclick="myloc()" style="cursor: pointer;">Office No 40, Palika Bazar, Bhilai, Dist : Durg (Chhattisgarh)</a></p>
                     </div>
                 </div>
             </div>

@@ -56,6 +56,9 @@ body {
 	max-width: 110px;
 	margin: -3px 0px 0px 0px;
 }
+.header .navbar-brand .logo2{
+	display: none;
+}
 
 @media (max-width:700px) {
 	.header .navbar-brand img {

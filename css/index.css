@@ -558,15 +558,19 @@
     width: 100%;
     height: 100%;
 }
-.home_gallery .gallery_slider_area .owl-item{
+.gallery_slider_area .owl-item{
     width: 100%;
     height: 230px !important;
+}
+.gallery_slider_area .owl-item .box{
+    width: 100%;
+    height: 100%;
 }
 /* ---------------------------------home_Sponsors------------- */
 .home_sponsors{
     position: relative;
     padding: 2rem;
-    background: url(../images/sponsor_bg_1.png);
+    background: url(../images/dark_steel_1.jpg);
     background-size: cover;
     background-position: center;
 }

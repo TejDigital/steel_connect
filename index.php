@@ -14,12 +14,12 @@ require('./admin/config/dbcon.php');
                 </div>
                 <div class="carousel-item">
                     <div class="img">
-                    <img src="images/steel_img_8.jpg" alt="">
+                        <img src="images/steel_img_8.jpg" alt="">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="img">
-                    <img src="images/steel_img_9.jpg" alt="">
+                        <img src="images/steel_img_9.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -44,10 +44,11 @@ require('./admin/config/dbcon.php');
                         <div class="address">
                             <p>
                                 <i class="fa-solid fa-calendar-days"></i>
-                                21 Aug 2023
+                                26 Nov 2023
                             </p>
                             <p><i class="fa-solid fa-location-dot"></i>Sayaji, Raipur</p>
                         </div>
+
                         <div class="times">
                             <div class="time_box">
                                 <span id="current_day"></span>
@@ -262,7 +263,7 @@ require('./admin/config/dbcon.php');
 <section class="home_gallery">
     <div class="container">
         <div class="text">
-            <h1>Gallery</h1>
+            <h1>Exhibitor</h1>
             <b></b>
             <p>Browse Through a Visual Journey</p>
         </div>
@@ -463,7 +464,7 @@ require('./admin/config/dbcon.php');
             <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
         </div>
         <div class="row">
-            <div class="col-md-4 box_area_1 p-1">
+            <div class="col-md-4 box_area_1 p-3">
                 <div class="box box_1">
                     <div class="head">
                         <div class="img">
@@ -475,7 +476,7 @@ require('./admin/config/dbcon.php');
                         </div>
                     </div>
                     <div class="body_text">
-                        <p>For the <span>first 50 attendees only</span> who act swiftly, we present an exclusive Early Arrival Delegate package. This premium package encompasses all event benefits and comes at a remarkable discounted rate</p>
+                        <p><span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits.</p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
@@ -489,7 +490,7 @@ require('./admin/config/dbcon.php');
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 p-1 box_area_1">
+            <div class="col-md-4 p-3 box_area_1">
                 <div class="box box_2">
                     <div class="head">
                         <div class="img">
@@ -501,7 +502,8 @@ require('./admin/config/dbcon.php');
                         </div>
                     </div>
                     <div class="body_text">
-                        <p>Exhibitors looking to showcase their products and services can choose the Per Exhibition package. This package includes dedicated exhibition space, branding opportunities, and access to the event.</p>
+                        <p>For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access.
+                        </p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
@@ -515,7 +517,7 @@ require('./admin/config/dbcon.php');
                     </div>
                 </div>
             </div>
-            <div class="col-md-4  p-1 box_area_1">
+            <div class="col-md-4  p-3 box_area_1">
                 <div class="box box_3">
                     <div class="head">
                         <div class="img">
@@ -527,7 +529,7 @@ require('./admin/config/dbcon.php');
                         </div>
                     </div>
                     <div class="body_text">
-                        <p>Attendees can secure their spot at Steel Connect by availing the Per Delegate package. This package includes access to all sessions, networking opportunities, and other event benefits.</p>
+                        <p> <span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more</p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
@@ -593,6 +595,44 @@ require('./admin/config/dbcon.php');
                 <div class="col-md-6 p-0">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119037.38264123915!2d81.25567209997178!3d21.19540793487601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293cccec49ed45%3A0x2b3ff3bd73c91877!2sBhilai%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1691386404348!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact_links">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 p-2">
+                <div class="box">
+                    <div class="icon">
+                        <a href="#!"><i class="fa-solid fa-phone-flip"></i></a>
+                    </div>
+                    <div class="text">
+                        <p><a href="tel:8085485778">+918085485778</a></p>
+                        <p><a href="#!">+918319619939</a></p>
+                        <p><a href="#!">+918602143123</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="box">
+                    <div class="icon">
+                        <a href="#!"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <div class="text">
+                        <p><a href="#!">steelconnect@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="box">
+                    <div class="icon">
+                        <a href="#!"><i class="fa-solid fa-location-dot"></i></a>
+                    </div>
+                    <div class="text">
+                        <p ><a onclick="myloc()" style="cursor: pointer;">Office No 40, Palika Bazar, Bhilai, Dist : Durg (Chhattisgarh)</a></p>
                     </div>
                 </div>
             </div>
