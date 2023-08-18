@@ -611,8 +611,8 @@ require('./admin/config/dbcon.php');
                     </div>
                     <div class="text">
                         <p><a href="tel:8085485778">+918085485778</a></p>
-                        <p><a href="#!">+918319619939</a></p>
-                        <p><a href="#!">+918602143123</a></p>
+                        <p><a href="tel:8319619939">+918319619939</a></p>
+                        <p><a href="tel:8602143123">+918602143123</a></p>
                     </div>
                 </div>
             </div>
@@ -632,7 +632,7 @@ require('./admin/config/dbcon.php');
                         <a href="#!"><i class="fa-solid fa-location-dot"></i></a>
                     </div>
                     <div class="text">
-                        <p ><a onclick="myloc()" style="cursor: pointer;">Office No 40, Palika Bazar, Bhilai, Dist : Durg (Chhattisgarh)</a></p>
+                        <p><a onclick="myloc()" style="cursor: pointer;">Office No 40, Palika Bazar, Bhilai, Dist : Durg (Chhattisgarh)</a></p>
                     </div>
                 </div>
             </div>
