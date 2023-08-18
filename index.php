@@ -464,85 +464,41 @@ require('./admin/config/dbcon.php');
             <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
         </div>
         <div class="row">
+        <?php
+                 $sql = "SELECT * FROM ticket_tbl where tic_status = '1'";
+     $query = mysqli_query($con, $sql);
+     if(mysqli_num_rows($query)){
+        while($data = mysqli_fetch_assoc($query)){
+     ?>
             <div class="col-md-4 box_area_1 p-3">
                 <div class="box box_1">
-                    <div class="head">
+                    <div class="head " style="background-color: <?=$data['tic_color']?>;" >
                         <div class="img">
                             <img src="./images/logo_1.svg" alt="">
                         </div>
                         <div class="head_text">
                             <p class="m-0">PER</p>
-                            <p class="m-0">EARLY<br>DELEGATE</p>
+                            <p class="m-0"><?=$data['tic_name']?></p>
                         </div>
                     </div>
                     <div class="body_text">
-                        <p><span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits.</p>
+                        <p><?=$data['tic_text']?></p>
                         <div class="pricing">
                             <div class="price m-0">
                                 <p class="">₹</p>
-                                <p class="">5,999*</p>
+                                <p class=""><?=$data['tic_price']?>*</p>
                             </div>
-                            <p class="gdt m-0"> + 18% GST</p>
+                            <p class="gdt m-0"> + <?=$data['tic_gst']?>% GST</p>
                         </div>
                         <div class="foot_text">
-                            <a href="#!">Buy now</a>
+                            <a href="./ticket_detail.php?id=<?=$data['tic_id']?>">Buy now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 p-3 box_area_1">
-                <div class="box box_2">
-                    <div class="head">
-                        <div class="img">
-                            <img src="./images/logo_1.svg" alt="">
-                        </div>
-                        <div class="head_text">
-                            <p class="m-0">PER</p>
-                            <p class="m-0">EXHIBITION</p>
-                        </div>
-                    </div>
-                    <div class="body_text">
-                        <p>For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access.
-                        </p>
-                        <div class="pricing">
-                            <div class="price m-0">
-                                <p class="">₹</p>
-                                <p class="">49,000*</p>
-                            </div>
-                            <p class="gdt m-0"> + 18% GST</p>
-                        </div>
-                        <div class="foot_text">
-                            <a href="#!">Buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4  p-3 box_area_1">
-                <div class="box box_3">
-                    <div class="head">
-                        <div class="img">
-                            <img src="./images/logo_1.svg" alt="">
-                        </div>
-                        <div class="head_text">
-                            <p class="m-0">PER</p>
-                            <p class="m-0">DELEGATE</p>
-                        </div>
-                    </div>
-                    <div class="body_text">
-                        <p> <span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more</p>
-                        <div class="pricing">
-                            <div class="price m-0">
-                                <p class="">₹</p>
-                                <p class="">6,999*</p>
-                            </div>
-                            <p class="gdt m-0"> + 18% GST</p>
-                        </div>
-                        <div class="foot_text">
-                            <a href="#!">Buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+        }}
+            ?>
         </div>
     </div>
 </section>

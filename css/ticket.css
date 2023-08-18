@@ -267,3 +267,105 @@
    background-color: #FA5A19;
    color: #fff;
 }
+
+
+
+
+
+
+
+
+/* --------------------------ticket_details---------------------------------- */
+.ticket_detail {
+    position: relative;
+}
+.ticket_detail .box{
+    position: relative;
+    padding: 1rem;
+}
+.ticket_detail .box h1{
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 2rem;
+}
+.ticket_detail .box h1 span{
+  font-weight: 300;
+}
+
+.ticket_detail .box .text_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ticket_detail .box .text_flex p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.ticket_detail .box .text_1 p{
+    font-weight: 700;
+}
+.ticket_detail .box .text_2 p:nth-child(1) span{
+    font-weight: 700;
+}
+.ticket_detail .box .text_2 p:nth-child(2){
+    font-weight: 700;
+}
+.ticket_detail .box .text_5{
+    border-top:  1px solid #005595;
+}
+.ticket_detail .box .text_5 p:nth-child(1){
+    font-weight: 700;
+}
+.ticket_detail .box .text_5 p:nth-child(2){
+    font-weight: 700;
+}
+.ticket_detail .contact{
+    position: relative;
+    margin-top: 1rem;
+}
+.ticket_detail .contact h2{
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+}
+.ticket_detail .contact .form-group{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+
+}
+.ticket_detail .contact .form-group span{
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.ticket_detail .contact .form-group .input_area{
+ border: 1.5px solid #000000;
+ padding: 1rem;
+ width: 100%;
+ border-radius: 2px;
+ color: #000000;
+}
+.ticket_detail .contact .form-group .input_area::placeholder{
+ color: #000000;
+ font-weight: 500;
+}
+.ticket_detail .contact .form-group .btn1{
+ background-color: #000000;
+ color: #fff;
+ text-align: center;
+ padding: 1rem;
+ width: 100%;
+ border: 1.5px solid transparent;
+ font-weight: 500;
+ transition: 0.5s all;
+}
+.ticket_detail .contact .form-group .btn1:hover{
+ background-color: transparent;
+ color: #000000;
+ border: 1.5px solid #000000;
+
+}

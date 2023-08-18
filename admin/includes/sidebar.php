@@ -121,6 +121,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
+
+                    <a href="ticket.php" class="nav-link">
+                    <i class="nav-icon  fa-solid fa-ticket"></i>
+                        <p>
+                            Ticket
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="images_tbl.php" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>

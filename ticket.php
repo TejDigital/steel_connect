@@ -1,4 +1,8 @@
-<?php require('./includes/header.php') ?>
+<?php require('./includes/header.php'); 
+require('./admin/config/dbcon.php');
+
+?>
+
 <section class="top_hero">
     <div class="img">
         <img src="./images/about_bg_1.png" alt="">
@@ -10,95 +14,158 @@
     </div>
 </section>
 <section class="tickets">
-    <div class="container">
-        <div class="text">
-            <h1>Tickets</h1>
-            <b></b>
-            <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-12 box_area_1 p-1">
-                <div class="box box_1">
-                    <div class="head">
-                        <div class="img">
-                            <img src="./images/logo_1.svg" alt="">
-                        </div>
-                        <div class="head_text">
-                            <p class="m-0">PER</p>
-                            <p class="m-0">EARLY<br>DELEGATE</p>
-                        </div>
-                    </div>
-                    <div class="body_text">
-                        <p><span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits.</p>
-                        <div class="pricing">
-                            <div class="price m-0">
-                                <p class="">₹</p>
-                                <p class="">5,999*</p>
+    <?php
+    // $sql = "SELECT * FROM ticket_tbl where tic_status = '1'";
+    // $query = mysqli_query($con, $sql);
+    // $data = mysqli_fetch_assoc($query);
+
+    // $query = "SELECT * FROM `ticket_tbl`";
+  
+  // FETCHING DATA FROM DATABASE
+//   $result = $con->query($query);
+  
+//     if ($result->num_rows > 0) 
+//     {
+//         // OUTPUT DATA OF EACH ROW
+//         while($row = $result->fetch_assoc())
+//         {
+//             // echo "Roll No: " .
+//                 $row["color"]. " red: " .
+//                 // $row["Name"]. " | City: " . 
+//                 // $row["City"]. " | Age: " . 
+//                 // $row["Age"]. "<br>";
+//                 // print_r( $row);
+//         }
+//     } 
+    
+
+    // $data[0]['color'] = "red";
+    // $data[1]['color'] = "blue";
+    // $data[2]['color'] = "green";
+
+    // $data[0]['text'] = "<span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits";
+    // $data[1]['text'] = " For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access.";
+    // $data[2]['text'] = "<span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more";
+
+    // echo "<pre>";
+    // print_r( $data['tic_name'] );
+    // echo "<pre>";
+   
+    // $sql1 = "SELECT * FROM ticket_tbl where tic_id = '1'";
+    // $query1 = mysqli_query($con, $sql1);
+    // $data1 = mysqli_fetch_assoc($query1);
+
+    // $sql2 = "SELECT * FROM ticket_tbl where tic_id = '2'";
+    // $query2 = mysqli_query($con, $sql2);
+    // $data2 = mysqli_fetch_assoc($query2);
+
+    // $sql3= "SELECT * FROM ticket_tbl where tic_id = '3'";
+    // $query3 = mysqli_query($con, $sql3);
+    // $data3 = mysqli_fetch_assoc($query3);
+
+    ?>
+            <div class="container">
+                <div class="text">
+                    <h1>Tickets</h1>
+                    <b></b>
+                    <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
+                </div>
+                <div class="row">
+                    <?php
+                 $sql = "SELECT * FROM ticket_tbl where tic_status = '1'";
+     $query = mysqli_query($con, $sql);
+     if(mysqli_num_rows($query)){
+        while($data = mysqli_fetch_assoc($query)){
+
+
+   
+     ?>
+                    <!-- <div class="col-md-12 box_area_1 p-1">
+                        <div class="box box_1">
+                            <div class="head">
+                                <div class="img">
+                                    <img src="./images/logo_1.svg" alt="">
+                                </div>
+                                <div class="head_text">
+                                    <p class="m-0">PER</p>
+                                    <p class="m-0"></p>
+                                </div>
                             </div>
-                            <p class="gdt m-0"> + 18% GST</p>
+                            <div class="body_text">
+                                <p>.</p>
+                                <div class="pricing">
+                                    <div class="price m-0">
+                                        <p class="">₹</p>
+                                        <p class="">*</p>
+                                    </div>
+                                    <p class="gdt m-0"> + % GST</p>
+                                </div>
+                                <div class="foot_text">
+                                    <a href="#!">Buy now</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="foot_text">
-                            <a href="#!">Buy now</a>
+                    </div> -->
+                    <div class="col-md-6 p-1 box_area_1">
+                        <div class="box ">
+                            <div class="head" style="background-color:<?=$data['tic_color']?>">
+                                <div class="img">
+                                    <img src="./images/logo_1.svg" alt="">
+                                </div>
+                                <div class="head_text">
+                                    <p class="m-0">PER</p>
+                                    <p class="m-0"><?= $data['tic_name'] ?></p>
+                                </div>
+                            </div>
+                            <div class="body_text">
+                                <p>
+                                <?= $data['tic_text'] ?>
+                                </p>
+                                <div class="pricing">
+                                    <div class="price m-0">
+                                        <p class="">₹</p>
+                                        <p class=""><?= $data['tic_price'] ?>*</p>
+                                    </div>
+                                    <p class="gdt m-0"> + <?= $data['tic_gst'] ?>% GST</p>
+                                </div>
+                                <div class="foot_text">
+                                    <a href="./ticket_detail.php?id=<?=$data['tic_id']?>">Buy now</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <?php
+                      }
+                    }
+                    ?>
+                    <!-- <div class="col-md-6  p-1 box_area_1">
+                        <div class="box box_3">
+                            <div class="head">
+                                <div class="img">
+                                    <img src="./images/logo_1.svg" alt="">
+                                </div>
+                                <div class="head_text">
+                                    <p class="m-0">PER</p>
+                                    <p class="m-0"></p>
+                                </div>
+                            </div>
+                            <div class="body_text">
+                                <p> </p>
+                                <div class="pricing">
+                                    <div class="price m-0">
+                                        <p class="">₹</p>
+                                        <p class="">*</p>
+                                    </div>
+                                    <p class="gdt m-0"> + % GST</p>
+                                </div>
+                                <div class="foot_text">
+                                    <a href="#!">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-md-6 p-1 box_area_1">
-                <div class="box box_2">
-                    <div class="head">
-                        <div class="img">
-                            <img src="./images/logo_1.svg" alt="">
-                        </div>
-                        <div class="head_text">
-                            <p class="m-0">PER</p>
-                            <p class="m-0">EXHIBITION</p>
-                        </div>
-                    </div>
-                    <div class="body_text">
-                        <p>
-                            For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access.
-                        </p>
-                        <div class="pricing">
-                            <div class="price m-0">
-                                <p class="">₹</p>
-                                <p class="">49,000*</p>
-                            </div>
-                            <p class="gdt m-0"> + 18% GST</p>
-                        </div>
-                        <div class="foot_text">
-                            <a href="#!">Buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6  p-1 box_area_1">
-                <div class="box box_3">
-                    <div class="head">
-                        <div class="img">
-                            <img src="./images/logo_1.svg" alt="">
-                        </div>
-                        <div class="head_text">
-                            <p class="m-0">PER</p>
-                            <p class="m-0">DELEGATE</p>
-                        </div>
-                    </div>
-                    <div class="body_text">
-                        <p> <span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more</p>
-                        <div class="pricing">
-                            <div class="price m-0">
-                                <p class="">₹</p>
-                                <p class="">6,999*</p>
-                            </div>
-                            <p class="gdt m-0"> + 18% GST</p>
-                        </div>
-                        <div class="foot_text">
-                            <a href="#!">Buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 <section class="home_3">
     <div class="container">
