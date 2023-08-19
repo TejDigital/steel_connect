@@ -40,8 +40,12 @@ if (isset($_POST['update_tic'])) {
     $price = $_POST['price'];
     $gst = $_POST['gst'];
     $status = $_POST['status'];
+    $color = $_POST['color'];
+    $des = $_POST['dec'];
 
-    $query = "UPDATE ticket_tbl SET tic_name='$name',tic_price='$price',tic_gst='$gst',tic_status='$status' WHERE tic_id ='$id'";
+   
+
+    $query = "UPDATE ticket_tbl SET tic_name='$name',tic_price='$price',tic_gst='$gst',tic_status='$status', tic_text='$des',tic_color='$color' WHERE tic_id ='$id'";
     $query_run = mysqli_query($con, $query);
 
 

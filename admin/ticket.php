@@ -126,9 +126,9 @@ require('config/dbcon.php');
                                             </td>
 
                                             <td>
-                                                <a href=ticket_edit.php?id=<?php echo $filds['tic_id']; ?> class='btn btn-info btn-sm '>Edit</a>
-                                                <button type='button' value=<?php echo $filds['tic_id']; ?> class='btn btn-danger delete_tic_btn btn-sm my-1'>Delete</button>
-                                                <!-- <a href=cus_details.php?cus_id=<?php echo $filds['tic_id']; ?> class='btn btn-info btn-sm'> View</a> -->
+                                                <a href=ticket_edit.php?id=<?php echo $filds['tic_id']; ?> class='btn btn-info btn-sm '><i class="fa-solid fa-pen-to-square"></i></a>
+                                                <button type='button' value=<?php echo $filds['tic_id']; ?> class='btn btn-danger delete_tic_btn btn-sm my-1'><i class="fa-solid fa-trash"></i></button>
+                                                <a href=ticket_view.php?id=<?php echo $filds['tic_id']; ?> class='btn btn-info btn-sm'><i class="fa-regular fa-eye"></i></a>
                                             </td>
                                             </tr>
                                     <?php

@@ -29,7 +29,7 @@ require('config/dbcon.php');
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form action="ticket_code.php" method="POST" >
+                    <form action="ticket_code.php" method="POST">
                         <div class="modal-body">
                             <?php
                             if (isset($_GET['id'])) {
@@ -43,15 +43,19 @@ require('config/dbcon.php');
 
                                         <div class="form-group">
                                             <label for="">Ticket Name</label>
-                                            <input type="text" name="name" value="<?= $row['tic_name'] ?>">
+                                            <input type="text" name="name" class="form-control" value="<?= $row['tic_name'] ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Ticket Price</label>
-                                            <input type="text" name="price" value="<?= $row['tic_price'] ?>">
+                                            <input type="text" name="price" class="form-control" value="<?= $row['tic_price'] ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Ticket GST</label>
-                                            <input type="text" name="gst" value="<?= $row['tic_gst'] ?>">
+                                            <input type="text" name="gst" class="form-control" value="<?= $row['tic_gst'] ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Ticket Color</label>
+                                            <input type="text" name="color" class="form-control" value="<?= $row['tic_color'] ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Status</label>
@@ -67,6 +71,11 @@ require('config/dbcon.php');
                                                                     }
                                                                     ?>>Inactive</option>
                                             </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="">Ticket Description</label>
+                                            <textarea name="dec" id="" class="form-control" cols="30" rows="4"><?= $row['tic_text'] ?></textarea>
                                         </div>
                             <?php
                                     }

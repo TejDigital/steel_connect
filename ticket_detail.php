@@ -33,7 +33,7 @@ require('./admin/config/dbcon.php');
                        
             ?>
                         <div class="col-md-4">
-                            <form action="">
+                            <form action="./admin/ticket_booking.php" method="post">
                                 <div class="box">
                                     <h1>Ticket <span>></span> Information <span>></span> Payment</h1>
                                     <div class="text_1 text_flex">
@@ -59,6 +59,7 @@ require('./admin/config/dbcon.php');
 
                                     <div class="contact">
                                         <h2>Contact</h2>
+                                        <input type="hidden" name="tol_price" value="<?=$totalAmount?>">
                                         <div class="form-group">
                                             <input type="text" class="input_area" name="name" placeholder="Name">
                                         </div>
@@ -74,7 +75,7 @@ require('./admin/config/dbcon.php');
                                         </div>
 
                                         <div class="form-group">
-                                            <button type="submit" class="btn1">Continue to Book</button>
+                                            <button type="submit" name="booked" class="btn1">Continue to Book</button>
                                         </div>
                                     </div>
                                 </div>
