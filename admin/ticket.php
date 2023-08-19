@@ -156,7 +156,7 @@ require('config/dbcon.php');
                                 <input type="number" name="gst" class="form-control" placeholder="Ticket GST">
 
                                 <label for="">Ticket COlor</label>
-                                <input type="text" name="color" class="form-control" placeholder="Ticket Color">
+                                <input type="text" name="color" class="form-control" placeholder="Ticket Color code">
 
                                 <label for="">Ticket Des</label>
                                 <input type="text" name="des" class="form-control" placeholder="Ticket Des">

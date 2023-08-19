@@ -16,7 +16,7 @@ require('config/dbcon.php');
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                        <li class="breadcrumb-item active">Images Edit</li>
+                        <li class="breadcrumb-item active">Exhibitor Edit</li>
                     </ol>
                 </div>
             </div>
@@ -31,12 +31,12 @@ require('config/dbcon.php');
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Edit Images</h3>
-            <a href="images_tbl.php" class="btn btn-danger btn-sm float-right"> Back</a>
+            <a href="exhibitor_tbl.php" class="btn btn-danger btn-sm float-right"> Back</a>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="image_gallery_code.php" method="POST" enctype="multipart/form-data">
+                    <form action="exhibitor_code.php" method="POST" enctype="multipart/form-data">
                         <div class="modal-body">
                             <?php
                             if (isset($_GET['img_id'])) {
@@ -50,6 +50,10 @@ require('config/dbcon.php');
                                         <div class="form-group">
                                             <label for="">Image</label>
                                             <img src="admin_img_upload/<?php echo $row['img_name'] ?>" alt="" width="200px" height="200px">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Exhibitor Name</label>
+                                            <input type="text" name="name" class="form-control" placeholder="Exhibitor Name" value="<?= $row['exhibitor_name']?>">
                                         </div>
 
                                         <div class="form-group">

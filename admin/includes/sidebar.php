@@ -130,10 +130,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="images_tbl.php" class="nav-link">
+                    <a href=" exhibitor_tbl.php" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>
-                            Gallery
+                        Exhibitors
                         </p>
                     </a>
                 </li>

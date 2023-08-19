@@ -43,6 +43,9 @@
                                 <input type="email" name="email" placeholder="Your Email Address" class="input_area">
                             </div>
                             <div class="input_box">
+                                <input type="text" name="address" placeholder="Your Address" class="input_area">
+                            </div>
+                            <div class="input_box">
                                 <select name="select_opt" id="" class="input_area">
                                     <option value="SELECT">SELECT</option>
                                     <option value="DELEGATE">DELEGATE</option>
@@ -77,9 +80,9 @@
                         <a href="#!"><i class="fa-solid fa-phone-flip"></i></a>
                     </div>
                     <div class="text">
-                        <p><a href="tel:8085485778">+918085485778</a></p>
-                        <p><a href="tel:8319619939">+918319619939</a></p>
-                        <p><a href="tel:8602143123">+918602143123</a></p>
+                        <p><a href="tel:8085485778"><span>+918085485778 </span> <b class="name"> Rohit Kumar Burman (For Exhibition)</b></a></p>
+                        <p><a href="tel:8319619939">+918319619939  <b class="name"> Amit Kumar (For Sponsorship & Exhibition)</b></a></p>
+                        <p><a href="tel:8602143123">+918602143123  <b class="name">Sandeep Kumar (For Delegates)</b></a></p>
                     </div>
                 </div>
             </div>

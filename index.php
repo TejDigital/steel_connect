@@ -283,6 +283,9 @@ require('./admin/config/dbcon.php');
                                     <a href="admin/admin_img_upload/<?= $data['img_name'] ?>" data-fancybox="gallery" title="" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                                     </a>
                                 </div>
+                                <div class="box_text">
+                                    <p class="text-center"><?= $data['exhibitor_name'] ?></p>
+                                </div>
                             </div>
 
                     <?php
@@ -448,6 +451,7 @@ require('./admin/config/dbcon.php');
             </table>
 
         </div>
+
     </div>
     <div class="container-fluid p-0">
         <div class="img">
@@ -455,6 +459,9 @@ require('./admin/config/dbcon.php');
         </div>
     </div>
 </section>
+<div class="foot_text">
+    <a href="#!">DOWNLOAD DELEGATE LIST</a>
+</div>
 
 <section class="home_ticket">
     <div class="container">
@@ -464,40 +471,41 @@ require('./admin/config/dbcon.php');
             <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
         </div>
         <div class="row">
-        <?php
-                 $sql = "SELECT * FROM ticket_tbl where tic_status = '1'";
-     $query = mysqli_query($con, $sql);
-     if(mysqli_num_rows($query)){
-        while($data = mysqli_fetch_assoc($query)){
-     ?>
-            <div class="col-md-4 box_area_1 p-3">
-                <div class="box box_1">
-                    <div class="head " style="background-color: <?=$data['tic_color']?>;" >
-                        <div class="img">
-                            <img src="./images/logo_1.svg" alt="">
-                        </div>
-                        <div class="head_text">
-                            <p class="m-0">PER</p>
-                            <p class="m-0"><?=$data['tic_name']?></p>
-                        </div>
-                    </div>
-                    <div class="body_text">
-                        <p><?=$data['tic_text']?></p>
-                        <div class="pricing">
-                            <div class="price m-0">
-                                <p class="">₹</p>
-                                <p class=""><?=$data['tic_price']?>*</p>
-                            </div>
-                            <p class="gdt m-0"> + <?=$data['tic_gst']?>% GST</p>
-                        </div>
-                        <div class="foot_text">
-                            <a href="./ticket_detail.php?id=<?=$data['tic_id']?>">Buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <?php
-        }}
+            $sql = "SELECT * FROM ticket_tbl where tic_status = '1'";
+            $query = mysqli_query($con, $sql);
+            if (mysqli_num_rows($query)) {
+                while ($data = mysqli_fetch_assoc($query)) {
+            ?>
+                    <div class="col-md-4 box_area_1 p-2">
+                        <div class="box box_1">
+                            <div class="head " style="background-color: <?= $data['tic_color'] ?>;">
+                                <div class="img">
+                                    <img src="./images/logo_1.svg" alt="">
+                                </div>
+                                <div class="head_text">
+                                    <p class="m-0">PER</p>
+                                    <p class="m-0"><?= $data['tic_name'] ?></p>
+                                </div>
+                            </div>
+                            <div class="body_text">
+                                <p><?= $data['tic_text'] ?></p>
+                                <div class="pricing">
+                                    <div class="price m-0">
+                                        <p class="">₹</p>
+                                        <p class=""><?= $data['tic_price'] ?>*</p>
+                                    </div>
+                                    <p class="gdt m-0"> + <?= $data['tic_gst'] ?>% GST</p>
+                                </div>
+                                <div class="foot_text">
+                                    <a href="./ticket_detail.php?id=<?= $data['tic_id'] ?>">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
+            }
             ?>
         </div>
     </div>
@@ -530,6 +538,9 @@ require('./admin/config/dbcon.php');
                             </div>
                             <div class="input_box">
                                 <input type="email" name="email" placeholder="Your Email Address" class="input_area">
+                            </div>
+                            <div class="input_box">
+                                <input type="text" name="address" placeholder="Your Address" class="input_area">
                             </div>
                             <div class="input_box">
                                 <select name="select_opt" id="" class="input_area">
@@ -566,9 +577,9 @@ require('./admin/config/dbcon.php');
                         <a href="#!"><i class="fa-solid fa-phone-flip"></i></a>
                     </div>
                     <div class="text">
-                        <p><a href="tel:8085485778">+918085485778</a></p>
-                        <p><a href="tel:8319619939">+918319619939</a></p>
-                        <p><a href="tel:8602143123">+918602143123</a></p>
+                        <p><a href="tel:8085485778"><span>+918085485778 </span> <b class="name"> Rohit Kumar Burman (For Exhibition)</b></a></p>
+                        <p><a href="tel:8319619939">+918319619939 <b class="name"> Amit Kumar (For Sponsorship & Exhibition)</b></a></p>
+                        <p><a href="tel:8602143123">+918602143123 <b class="name">Sandeep Kumar (For Delegates)</b></a></p>
                     </div>
                 </div>
             </div>

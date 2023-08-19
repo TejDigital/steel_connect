@@ -15,7 +15,7 @@
             <div class="col-md-6">
                 <div class="text">
                     <h1>About Steel Connect</h1>
-                    <p>At North Super Fast Service Ltd, our mission is to be the leading logistics partner in India, delivering exceptional and innovative solutions to our clients. We aim to provide reliable, cost-effective, and efficient transportation services that exceed customer expectations. With a strong commitment to safety, sustainability, and customer satisfaction, we strive to build lasting relationships and contribute to the growth and success of businesses nationwide.</p>
+                    <p>Steel Connect, offered by Steel Trade Info Services in Bhilai, Chhattisgarh, acts as a central hub uniting stakeholders in the iron and steel sector, especially focusing on Chhattisgarh's robust industry due to the Bhilai Steel Plant. Providing daily industry news, research, and infographics, the platform's core objective is to bridge connections among primary and secondary steel manufacturers in the region, enabling engagement with traders, wholesalers, resellers, and more across India. By fostering direct interactions, Steel Connect facilitates the growth of businesses by harnessing Chhattisgarh's top-tier steel products and the expansive national trading network, thereby catalyzing partnerships and unlocking the full potential of the local steel market.</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -78,7 +78,7 @@
             </div>
             <div class="col-md-6">
                 <div class="img">
-                    <img src="./images/about_about_1.png" alt="">
+                    <img src="./images/about_about_2.png" alt="">
                 </div>
             </div>
         </div>

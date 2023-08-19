@@ -21,32 +21,34 @@ $data1 = mysqli_fetch_assoc($result);
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <!-- <div class="card-header" id="Hotel_bill" style="display:none;">
-                        <h1 style="text-align:center; font-size:2rem; " >Hotel Bill</h1>
-                        </div> -->
+                       
                         <div class="card-header " id="back_btn">
                             Person Detail
                             <a href="index.php" id="back_btn" class="btn btn-danger float-right">Back</a>
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                 <label for="">Name</label>
                                     <h6><?php echo $data1['name'] ?></h6>
                                 </div>
-                                <!-- <div class="col-md-3">
+                                <div class="col-md-3">
                                 <label for="">Phone</label>
-                                    <h6><?php echo $data1['number'] ?></h6>
-                                </div> -->
-                                <div class="col-md-4">
+                                    <h6><?php echo $data1['phone'] ?></h6>
+                                </div>
+                                <div class="col-md-3">
                                 <label for="">Email</label>
                                     <h6><?php echo $data1['email'] ?></h6>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                 <label for="">Select Option</label>
                                     <h6><?php echo $data1['select_opt'] ?></h6>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <label for="">Address</label>
+                                    <h6><?php echo $data1['address'] ?></h6>
+                                </div>
+                                <div class="col-md-6">
                                     <label for="">Messages</label>
                                     <h6><?php echo $data1['message'] ?></h6>
                                 </div>

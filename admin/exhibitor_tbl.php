@@ -36,7 +36,7 @@ require('config/dbcon.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Image Gallery</h1>
+                    <h1 class="m-0 text-dark">Exhibitor</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -57,7 +57,7 @@ require('config/dbcon.php');
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="image_gallery_code.php" method="POST">
+                <form action="exhibitor_code.php" method="POST">
                     <div class="modal-body">
                         <input type="hidden" name="delete_img_id" class="delete_image_id">
                         <p>Are you sure , you want to delete this data ?</p>
@@ -93,7 +93,8 @@ require('config/dbcon.php');
                                 <thead>
                                     <tr>
                                         <th>S.No.</th>
-                                        <th>Img_Name</th>
+                                        <th>Image </th>
+                                        <th>Exhibitor Name</th>
                                         <th>Status</th>
                                         <!-- <th>Message</th> -->
                                         <!-- <th>File</th> -->
@@ -111,6 +112,7 @@ require('config/dbcon.php');
                                             </tr>
                                             <td><?= $count ++ ?></td>
                                             <td><?= $filds['img_name'] ?></td>
+                                            <td><?= $filds['exhibitor_name'] ?></td>
                                             <!-- <td><?= $filds['status'] ?></td> -->
                                             <td>
                                                     <?php
@@ -126,7 +128,7 @@ require('config/dbcon.php');
                                                     ?>
                                                 </td>
                                             <td>
-                                                <a href=image_edit.php?img_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm '>Edit</a>
+                                                <a href=exhibitor_edit.php?img_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm '>Edit</a>
                                                 <button type='button' value=<?php echo $filds['id']; ?> class='btn btn-danger delete_img_btn btn-sm my-1'>Delete</button>
                                                 <!-- <a href=cus_details.php?cus_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm'> View</a> -->
                                             </td>
@@ -144,10 +146,14 @@ require('config/dbcon.php');
                     <div class="card">
                         <div class="card-body">
                             <h4 class="text-dark">Upload Image</h4>
-                            <form action="image_gallery_code.php" method="post" enctype="multipart/form-data">
+                            <form action="exhibitor_code.php" method="post" enctype="multipart/form-data">
                                 <label for="">Choose Image</label>
                                 <br>
                                 <input class="form-control p-0 m-0"  name="img_upl" type="file" style="width:100%;">
+
+                                <label for="">Exhibitor Name</label>
+                                
+                                <input class="form-control p-0 m-0"  name="name" type="text" style="width:100%;">
                                 <label for="">Status</label>
                                 <select class="form-control" name="status" id="" class="py-2">
                                     <option value="1">active</option>

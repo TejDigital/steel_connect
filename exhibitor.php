@@ -7,9 +7,9 @@ require('./admin/config/dbcon.php');
         <img src="./images/about_bg_1.png" alt="">
     </div>
     <div class="text">
-        <h1>Gallery</h1>
+        <h1>Exhibitor</h1>
         <p><span><a href="./index.php">Home</a></span>
-            << Gallery </p>
+            << Exhibitor </p>
     </div>
 </section>
 <section class="gallery_slick">
@@ -69,6 +69,7 @@ require('./admin/config/dbcon.php');
                                 ?>
                                         <div class="img_nav">
                                             <img src="./admin/admin_img_upload/<?= $data['img_name'] ?>" alt="">
+                                            <p class="text-center"><?=$data['exhibitor_name']?></p>
                                         </div>
 
                                 <?php

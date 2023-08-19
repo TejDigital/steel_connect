@@ -193,6 +193,9 @@ require('./admin/config/dbcon.php');
                                     <a href="./admin/admin_img_upload/<?= $data['img_name'] ?>" data-fancybox="gallery1" itemprop="url"><i class="fa-solid fa-eye"></i></a>
                                     </a>
                                 </div>
+                                <div class="box_text">
+                                    <p class="text-center"><?=$data['exhibitor_name']?></p>
+                                </div>
                             </div>
 
                     <?php

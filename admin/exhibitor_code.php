@@ -7,11 +7,12 @@ if (isset($_POST['img_upload'])) {
 
     $img = $_FILES['img_upl']['name'];
     $status = $_POST['status'];
+    $name = $_POST['name'];
 
 
     if ($_FILES['img_upl']["size"] > 500000) {
         $_SESSION['steel_msg'] = " image size is to Big";
-        header('location:images_tbl.php');
+        header('location:exhibitor_tbl.php');
     }
     echo $_FILES['img_upl']["size"];
     $img_ext = ['png', 'jpg', 'jpeg'];
@@ -23,10 +24,10 @@ if (isset($_POST['img_upload'])) {
     if (!in_array($file_ext, $img_ext)) {
 
         $_SESSION['steel_msg'] = "img only in jpg  or jpeg ext";
-        header('location:images_tbl.php');
+        header('location:exhibitor_tbl.php');
     } else {
 
-        $sql = "INSERT INTO img_tbl(img_name,status) VALUES('$img','$status')";
+        $sql = "INSERT INTO img_tbl(img_name,exhibitor_name,status) VALUES('$img','$name','$status')";
 
         $connect_db = mysqli_query($con, $sql);
 
@@ -34,11 +35,11 @@ if (isset($_POST['img_upload'])) {
             move_uploaded_file($_FILES['img_upl']['tmp_name'], 'admin_img_upload/' . $img);
 
             $_SESSION['steel_msg'] = "image uploaded  Successfully.";
-            header('location:images_tbl.php');
+            header('location:exhibitor_tbl.php');
         } else {
 
             $_SESSION['steel_msg'] = "Somthing went wrong";
-            header('location:images_tbl.php');
+            header('location:exhibitor_tbl.php');
         }
     }
 };
@@ -55,10 +56,10 @@ if (isset($_POST['delete_img'])) {
     if ($query_delete_run) {
 
         $_SESSION['steel_msg'] = "Image deleted";
-        header('location:images_tbl.php');
+        header('location:exhibitor_tbl.php');
     } else {
         $_SESSION['steel_msg'] = "Image deletion failed";
-        header('location:images_tbl.php');
+        header('location:exhibitor_tbl.php');
     }
 }
 
@@ -95,7 +96,7 @@ if (isset($_POST['delete_img'])) {
 //             move_uploaded_file($_FILES['img_new']['tmp_name'], 'admin_img_upload/' . $img_name);
 
 //             $_SESSION['steel_msg'] = "image uploaded  Successfully.";
-//             header('location:images_tbl.php');
+//             header('location:exhibitor_tbl.php');
 //         } else {
 
 //             $_SESSION['steel_msg'] = "Somthing went wrong";
@@ -112,6 +113,7 @@ if (isset($_POST['update_img'])) {
     $new_img = $_FILES['new_img']['name'];
     $status = $_POST['status'];
     $old_img = $_POST['img_old'];
+    $name = $_POST['name'];
 
 
     if ($new_img != '') {
@@ -134,7 +136,7 @@ if (isset($_POST['update_img'])) {
     } else {
         $updated_img = $old_img;
     }
-    $sql = "UPDATE img_tbl SET status='$status',img_name='$updated_img' WHERE id='$id'";
+    $sql = "UPDATE img_tbl SET status='$status',img_name='$updated_img',exhibitor_name='$name' WHERE id='$id'";
 
     $connect_db = mysqli_query($con, $sql);
 
@@ -144,10 +146,10 @@ if (isset($_POST['update_img'])) {
             unlink("gallery_img_upload/" . $old_img);
         }
         $_SESSION['steel_msg'] = "image uploaded  Successfully.";
-        header('location:images_tbl.php');
+        header('location:exhibitor_tbl.php');
     } else {
         $_SESSION['steel_msg'] = "Somthing went wrong";
-        header('location:images_tbl.php');
+        header('location:exhibitor_tbl.php');
     }
 };
 

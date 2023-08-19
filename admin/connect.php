@@ -65,11 +65,12 @@ if (isset($_POST['submit'])) {
     $phone = $_POST['phone'];
     $select_opt = $_POST['select_opt'];
     $message = $_POST['message'];
-
-    $sql = "INSERT INTO contact_tbl(name,email,phone,message,select_opt)VALUES('$name','$email','$phone','$message','$select_opt')";
-
+    $address = $_POST['address'];
+    
+    $sql = "INSERT INTO contact_tbl(name,email,phone,message,address,select_opt)VALUES('$name','$email','$phone','$message','$address','$select_opt')";
+    
     $connect_db = mysqli_query($con, $sql);
-
+    
     if ($connect_db) {
         $_SESSION['steel_msg'] = "We are connect Soon";
         header('location:../contact.php');
@@ -80,22 +81,23 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_POST['submit2'])) {
-
+    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $select_opt = $_POST['select_opt'];
     $message = $_POST['message'];
+    $address = $_POST['address'];
 
-    $sql = "INSERT INTO contact_tbl(name,email,phone,message,select_opt)VALUES('$name','$email','$phone','$message','$select_opt')";
+    $sql = "INSERT INTO contact_tbl(name,email,phone,message,address,select_opt)VALUES('$name','$email','$phone','$message','$address','$select_opt')";
 
     $connect_db = mysqli_query($con, $sql);
 
     if ($connect_db) {
-        $_SESSION['steel_msg'] = "We are connect Soon";
+        $_SESSION['steel_msg'] = "We will connect Soon";
         header('location:../index.php');
     } else {
-        $_SESSION['steel_msg'] = "Somthing went wrong";
+        $_SESSION['steel_msg'] = "Something went wrong";
         header('location:../index.php');
     }
 }

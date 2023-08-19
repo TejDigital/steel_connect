@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/ticket.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/program.css">
-    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/exhibitor.css">
     <link rel="stylesheet" href="./css/sponsors.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -57,7 +57,7 @@
             <div class="container-fluid px-lg-5">
                 <nav class="navbar navbar-expand-lg my-navbar">
                     <a class="navbar-brand" href="index.php">
-                        <img src="images/Logo_1.svg" class="img-fluid logo1">
+                        <img src="./images/Logo_1.svg" class="img-fluid logo1">
                         <img src="./images/logo_dark.jpg" class="img-fluid logo2">
                     </a>
                     <div class="toggel_btns">
@@ -75,7 +75,7 @@
                                 <a class="nav-link" href="./index.php">Home <span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./about.php">About <span>/</span></a>
+                                <a class="nav-link" href="./about.php">About Us<span>/</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./speaker.php">Speakers <span>/</span></a>
@@ -90,7 +90,7 @@
                                 <a class="nav-link" href="./ticket.php">Tickets <span>/</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./gallery.php">Gallery <span>/</span></a>
+                                <a class="nav-link" href="./exhibitor.php">Exhibitor<span>/</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./contact.php">Contact <span>/</span></a>

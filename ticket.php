@@ -1,4 +1,6 @@
-<?php require('./includes/header.php'); 
+<?php 
+session_start();
+require('./includes/header.php'); 
 require('./admin/config/dbcon.php');
 
 ?>
@@ -72,6 +74,12 @@ require('./admin/config/dbcon.php');
                 </div>
                 <div class="row">
                     <?php
+                    
+
+                    // Clear the ticket numbers associated with different ticket types
+                    if (isset($_SESSION['ticket_numbers'])) {
+                        unset($_SESSION['ticket_numbers']);
+                    }
                  $sql = "SELECT * FROM ticket_tbl where tic_status = '1'";
      $query = mysqli_query($con, $sql);
      if(mysqli_num_rows($query)){
@@ -106,7 +114,7 @@ require('./admin/config/dbcon.php');
                             </div>
                         </div>
                     </div> -->
-                    <div class="col-md-6 p-1 box_area_1">
+                    <div class="col-md-4 p-1 box_area_1">
                         <div class="box ">
                             <div class="head" style="background-color:<?=$data['tic_color']?>">
                                 <div class="img">

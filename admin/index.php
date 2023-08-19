@@ -94,6 +94,7 @@ require('config/dbcon.php');
                                     <tr>
                                         <th>Id</th>
                                         <th>Name</th>
+                                        <th>phone</th>
                                         <th>Email</th>
                                         <th>Select_opt</th>
                                         <th colspan="2" class="text-center">Action</th>
@@ -111,6 +112,7 @@ require('config/dbcon.php');
                                             <tr>
                                                 <td><?= $count ++ ?></td>
                                                 <td><?= $data['name'] ?></td>
+                                                <td><?= $data['phone'] ?></td>
                                                 <td><?= $data['email'] ?></td>
                                                 <td><?= $data['select_opt'] ?></td>
                                                 <td class="text-center"><a href="contact_view.php?cus_id=<?= $data['id'] ?>" class="btn btn-info btn-sm">View</a></td>

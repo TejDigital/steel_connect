@@ -129,7 +129,7 @@ require('./admin/config/dbcon.php');
             <p><span>Elevate your brand's presence and seize unique opportunities by sponsoring Steel Connect, the platform that connects the iron and steel industry's leading players.</span></p>
         </div>
         <div class="foot_text">
-            <a href="#!">Contact Us</a>
+            <a href="./contact.php">Contact Us</a>
         </div>
     </div>
 </section>
