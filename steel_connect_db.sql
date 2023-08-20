@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 18, 2023 at 09:18 PM
+-- Generation Time: Aug 20, 2023 at 01:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -33,6 +33,7 @@ CREATE TABLE `contact_tbl` (
   `email` varchar(40) NOT NULL,
   `message` text NOT NULL,
   `phone` varchar(12) NOT NULL,
+  `address` varchar(100) NOT NULL,
   `select_opt` varchar(10) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -41,11 +42,13 @@ CREATE TABLE `contact_tbl` (
 -- Dumping data for table `contact_tbl`
 --
 
-INSERT INTO `contact_tbl` (`id`, `name`, `email`, `message`, `phone`, `select_opt`, `created_at`) VALUES
-(1, 'rohan', 'rohan@gmail.com', 'hello', '1234567890', 'DELEGATE', '2023-08-14 06:02:07'),
-(3, 'ashu', 'ashu@gmail.com', 'hello', '9876543211', 'Other', '2023-08-14 06:05:38'),
-(5, 'ABC Kumar', 'abc@gmail.com', 'hello', '1234567890', 'EXHIBITION', '2023-08-18 04:33:49'),
-(6, 'ABC ', 'ashu@gmail.com', 'hello', '1234567890', 'EXHIBITION', '2023-08-18 13:26:25');
+INSERT INTO `contact_tbl` (`id`, `name`, `email`, `message`, `phone`, `address`, `select_opt`, `created_at`) VALUES
+(1, 'rohan', 'rohan@gmail.com', 'hello', '1234567890', '', 'DELEGATE', '2023-08-14 06:02:07'),
+(3, 'ashu', 'ashu@gmail.com', 'hello', '9876543211', '', 'Other', '2023-08-14 06:05:38'),
+(5, 'ABC Kumar', 'abc@gmail.com', 'hello', '1234567890', '', 'EXHIBITION', '2023-08-18 04:33:49'),
+(6, 'ABC ', 'ashu@gmail.com', 'hello', '1234567890', '', 'EXHIBITION', '2023-08-18 13:26:25'),
+(7, 'navinn', 'rohan@gmail.com', 'cscss', '1234567890', 'bhillai ,25 ,street 5 x', 'DELEGATE', '2023-08-19 08:50:38'),
+(8, 'ABC Kumar', 'abc@gmail.com', 'ghcgthbbh jnhjgfghtgh', '9876543211', 'bhillai ,25 ,streeytdfzsdxgchvh buygv8765456tfyv ', 'DELEGATE', '2023-08-19 08:54:43');
 
 -- --------------------------------------------------------
 
@@ -55,6 +58,7 @@ INSERT INTO `contact_tbl` (`id`, `name`, `email`, `message`, `phone`, `select_op
 
 CREATE TABLE `img_tbl` (
   `id` int(11) NOT NULL,
+  `exhibitor_name` varchar(30) NOT NULL,
   `img_name` varchar(50) NOT NULL,
   `status` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
@@ -64,13 +68,13 @@ CREATE TABLE `img_tbl` (
 -- Dumping data for table `img_tbl`
 --
 
-INSERT INTO `img_tbl` (`id`, `img_name`, `status`, `created_at`) VALUES
-(6, 'gallery_img_1.jpg', 1, '2023-08-17 13:07:59'),
-(7, 'gallery_img_2.jpg', 1, '2023-08-17 13:08:11'),
-(8, 'gallery_img_3.jpg', 1, '2023-08-17 13:08:19'),
-(9, 'gallery_img_4.jpg', 1, '2023-08-17 13:08:31'),
-(10, 'gallery_img_5.jpg', 1, '2023-08-17 13:08:40'),
-(11, 'gallery_img_6.jpg', 1, '2023-08-17 13:08:48');
+INSERT INTO `img_tbl` (`id`, `exhibitor_name`, `img_name`, `status`, `created_at`) VALUES
+(6, 'ABC ', 'gallery_img_1.jpg', 1, '2023-08-17 13:07:59'),
+(7, 'ABC ', 'gallery_img_2.jpg', 1, '2023-08-17 13:08:11'),
+(8, 'ABC ', 'gallery_img_3.jpg', 1, '2023-08-17 13:08:19'),
+(9, 'ABC ', 'gallery_img_4.jpg', 1, '2023-08-17 13:08:31'),
+(10, 'ABC ', 'gallery_img_5.jpg', 1, '2023-08-17 13:08:40'),
+(11, 'ABC ', 'gallery_img_6.jpg', 1, '2023-08-17 13:08:48');
 
 -- --------------------------------------------------------
 
@@ -115,10 +119,10 @@ CREATE TABLE `sponsors_tbl` (
 --
 
 INSERT INTO `sponsors_tbl` (`spo_id`, `spo_cat_id`, `spo_img`, `spo_status`, `spo_created_at`) VALUES
-(2, 2, 'sponsor_2.svg', 1, '2023-08-14 11:12:15'),
-(3, 3, 'sponsor_3.svg', 1, '2023-08-14 11:17:09'),
-(4, 4, 'sponsor_4.svg', 1, '2023-08-14 11:43:39'),
-(5, 1, 'sponsor_1.svg', 1, '2023-08-14 12:03:42');
+(2, 2, 'sponsor_2.svg', 0, '2023-08-14 11:12:15'),
+(3, 3, 'sponsor_3.svg', 0, '2023-08-14 11:17:09'),
+(4, 4, 'sponsor_4.svg', 0, '2023-08-14 11:43:39'),
+(5, 1, 'sponsor_1.svg', 0, '2023-08-14 12:03:42');
 
 -- --------------------------------------------------------
 
@@ -165,9 +169,9 @@ CREATE TABLE `ticket_tbl` (
 --
 
 INSERT INTO `ticket_tbl` (`tic_id`, `tic_name`, `tic_price`, `tic_gst`, `tic_status`, `tic_created_at`, `tic_color`, `tic_text`) VALUES
-(1, 'EARLY DELEGATE', 5999, 18, 1, '2023-08-18 14:10:59', '#005595', '<span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits'),
-(2, 'EXHIBITION', 49000, 18, 1, '2023-08-18 14:11:29', '#893D00', 'For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event access'),
-(3, 'DELEGATE', 6999, 18, 1, '2023-08-18 14:11:47', '#555555', '<span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more');
+(2, 'EXHIBITION', 49999, 18, 1, '2023-08-18 14:11:29', '#893D00', 'For <span>exhibitors:</span> Choose the Per Exhibition package for dedicated space, branding, and event <br> access'),
+(3, 'DELEGATE', 6999, 18, 1, '2023-08-18 14:11:47', '#555555', '<span>Attendees:</span> Secure your spot with the Per Delegate package for access to sessions, networking, and more\r\n\r\n'),
+(4, 'EARLY DELEGATE', 5999, 18, 1, '2023-08-19 05:29:44', '#005595', '<span> Limited offer:</span>Exclusive Early Arrival Delegate package for the first 50 attendees at a discounted rate, with all event benefits');
 
 -- --------------------------------------------------------
 
@@ -245,7 +249,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact_tbl`
 --
 ALTER TABLE `contact_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `img_tbl`
@@ -275,7 +279,7 @@ ALTER TABLE `sponsor_category`
 -- AUTO_INCREMENT for table `ticket_tbl`
 --
 ALTER TABLE `ticket_tbl`
-  MODIFY `tic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `tic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
