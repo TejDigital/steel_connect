@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +22,9 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/fancybox.min.css">
 </head>
+
 <body>
-<header class="header">
+    <header class="header">
         <div class="header-inner">
             <!-- <nav class="top_nav" id="top_nav">
                 <div class="container-fluid">
@@ -61,13 +63,13 @@
                         <img src="./images/logo_dark.jpg" class="img-fluid logo2">
                     </a>
                     <div class="toggel_btns">
-                    <button class="navbar-toggler toggel_btn1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class=""><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
-                    </button>
+                        <button class="navbar-toggler toggel_btn1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
+                        </button>
 
-                    <button class="navbar-toggler toggel_btn2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class=""><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
-                    </button>
+                        <button class="navbar-toggler toggel_btn2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""><i class="fas fa-bars" style="margin:5px 0px 0px 0px;"></i></span>
+                        </button>
                     </div>
                     <div class="collapse navbar-collapse navbar_mobile" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto px-5">

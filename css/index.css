@@ -118,7 +118,7 @@
         top: 68%;
     }
     .home_top .box .text .main_box h1{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin-top: 2rem;
         line-height: 3;
     }
@@ -141,6 +141,12 @@
     }
     .home_top .box .text .main_box .address p{
         font-size: 1rem;
+        margin: 0 0.8rem;
+    }
+}
+@media(max-width:447px){
+    .home_top .box .text .main_box .address p{
+        font-size: 0.8rem;
     }
 }
 
@@ -834,5 +840,10 @@
     .home_ticket .box{
         max-width: 100%;
         max-height: 100%;
+    }
+}
+@media(max-width:768px){
+    .home_ticket .box .body_text p{
+        font-size: 1.3rem;
     }
 }
