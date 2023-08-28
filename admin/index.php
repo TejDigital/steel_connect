@@ -81,12 +81,15 @@ require('config/dbcon.php');
                     <div class="card">
                         <?php
                         if (isset($_SESSION['steel_msg'])) {
-                            echo "<script>alert('".$_SESSION['steel_msg'] ."')</script>";
+                            echo "<script>alert('" . $_SESSION['steel_msg'] . "')</script>";
                             unset($_SESSION['steel_msg']);
                         }
                         ?>
                         <div class="card-header">
                             <h3 class="card-title">Messages</h3>
+                            <form action="connect.php" method="post">
+                    <button type="submit" class="btn btn-primary float-right" name="exl">Excel</button>
+                </form>
                         </div>
                         <div class="card-body ">
                             <table id="example1" class="table table-bordered table-striped">
@@ -110,7 +113,7 @@ require('config/dbcon.php');
                                         foreach ($query as $data) {
                                     ?>
                                             <tr>
-                                                <td><?= $count ++ ?></td>
+                                                <td><?= $count++ ?></td>
                                                 <td><?= $data['name'] ?></td>
                                                 <td><?= $data['phone'] ?></td>
                                                 <td><?= $data['email'] ?></td>

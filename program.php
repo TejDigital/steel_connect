@@ -205,8 +205,13 @@ require('./admin/config/dbcon.php');
                 </div>
             </div>
         </div>
+        <?php
+        $sql1 = "SELECT * FROM delegate_tbl WHERE status = '1'";
+        $query1 = mysqli_query($con, $sql1);
+        $result = mysqli_fetch_assoc($query1);
+        ?>
         <div class="foot_text">
-            <a href="#!">DOWNLOAD DELEGATE LIST</a>
+            <a href="./admin/delegate/<?=$result['name']?>">DOWNLOAD DELEGATE LIST</a>
         </div>
     </div>
 </section>
@@ -221,7 +226,7 @@ require('./admin/config/dbcon.php');
             <p><span>Elevate your brand's presence and seize unique opportunities by sponsoring Steel Connect, the platform that connects the iron and steel industry's leading players.</span></p>
         </div>
         <div class="foot_text">
-            <a href="#!">Contact Us</a>
+            <a href="contact.php">Contact Us</a>
         </div>
     </div>
 </section>

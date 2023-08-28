@@ -59,7 +59,7 @@
             <div class="container-fluid px-lg-5">
                 <nav class="navbar navbar-expand-lg my-navbar">
                     <a class="navbar-brand" href="index.php">
-                        <img src="./images/Logo_1.svg" class="img-fluid logo1">
+                        <img src="./images/logo_1.svg" class="img-fluid logo1">
                         <img src="./images/logo_dark.jpg" class="img-fluid logo2">
                     </a>
                     <div class="toggel_btns">

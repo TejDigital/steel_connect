@@ -121,6 +121,22 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="delegate_tbl.php" class="nav-link">
+                        <i class="nav-icon fa-solid fa-file"></i>
+                        <p>
+                            Delegate
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="brochure_tbl.php" class="nav-link">
+                        <i class="nav-icon fa-solid fa-file-lines"></i>
+                        <p>
+                            Brochure
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
 
                     <a href="ticket.php" class="nav-link">
                     <i class="nav-icon  fa-solid fa-ticket"></i>

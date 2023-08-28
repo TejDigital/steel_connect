@@ -78,7 +78,12 @@ require('./admin/config/dbcon.php');
         <div class="row">
             <div class="col-md-12">
                 <div class="down_pdf">
-                    <a href="#!">DOWNLOAD BROCHURE</a>
+                <?php
+        $sql1 = "SELECT * FROM brochure_tbl WHERE status = '1'";
+        $query1 = mysqli_query($con, $sql1);
+        $result = mysqli_fetch_assoc($query1);
+        ?>
+                    <a href="<?=$result['name']?>">DOWNLOAD BROCHURE</a>
                 </div>
                 <div class="text">
                     <h1> How Steel Connect Can Help You?</h1>
@@ -459,9 +464,14 @@ require('./admin/config/dbcon.php');
         </div>
     </div>
 </section>
-<div class="foot_text">
-    <a href="#!">DOWNLOAD DELEGATE LIST</a>
-</div>
+<?php
+        $sql1 = "SELECT * FROM delegate_tbl WHERE status = '1'";
+        $query1 = mysqli_query($con, $sql1);
+        $result = mysqli_fetch_assoc($query1);
+        ?>
+        <div class="foot_text">
+            <a href="./admin/delegate/<?=$result['name']?>">DOWNLOAD DELEGATE LIST</a>
+        </div>
 
 <section class="home_ticket">
     <div class="container">

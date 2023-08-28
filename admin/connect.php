@@ -152,3 +152,46 @@ if (isset($_POST['delete_msg'])) {
         header('location:index.php');
     }
 }
+
+
+
+
+// -----------------------excel---------------
+$output ="";
+if(isset($_POST['exl'])){
+ $sql1 = "SELECT * FROM contact_tbl ";
+ $Q = mysqli_query($con,$sql1);
+ $i = 1;
+
+ $output .='<table class="table" border="1">
+ <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>Mobile</th>
+     <th>Select_opt</th>
+     <th>Address</th>
+     <th>Message</th>
+ </tr>';
+ if(mysqli_num_rows($Q )> 0 ){
+    while($row = mysqli_fetch_array($Q)){
+        $output .= '<tr>
+        <td>'.$i ++.'</td>
+        <td>'.$row["name"].'</td>
+        <td>'.$row["email"].'</td>
+        <td>'.$row["phone"].'</td>
+        <td>'.$row["select_opt"].'</td>
+        <td>'.$row["message"].'</td>
+    </tr>';
+
+}
+}
+$output .= '</table>';
+
+    
+    // Headers for download 
+     header("Content-Type: application/vnd.ms-excel"); 
+     header("Content-Disposition: attachment; filename=report.xls"); 
+echo $output;
+}
+
+?>
