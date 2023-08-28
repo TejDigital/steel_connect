@@ -121,6 +121,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="booking_tbl.php" class="nav-link">
+                        <i class="nav-icon fa-solid fa-file"></i>
+                        <p>
+                           Bookings
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="delegate_tbl.php" class="nav-link">
                         <i class="nav-icon fa-solid fa-file"></i>
                         <p>
@@ -137,7 +145,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-
                     <a href="ticket.php" class="nav-link">
                     <i class="nav-icon  fa-solid fa-ticket"></i>
                         <p>

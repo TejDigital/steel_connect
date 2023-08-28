@@ -73,9 +73,13 @@ require('./admin/config/dbcon.php');
                     <p>Secure your spot at Steel Connect - the ultimate networking event for the iron and steel industry.</p>
                 </div>
                 <div class="row">
+                <?php
+                        if (isset($_SESSION['steel_msg'])) {
+                            echo "<script>alert('".$_SESSION['steel_msg'] ."')</script>";
+                            unset($_SESSION['steel_msg']);
+                        }
+                        ?>
                     <?php
-                    
-
                     // Clear the ticket numbers associated with different ticket types
                     if (isset($_SESSION['ticket_numbers'])) {
                         unset($_SESSION['ticket_numbers']);

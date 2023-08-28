@@ -19,6 +19,12 @@ require('./admin/config/dbcon.php');
         <div class="row">
             <div class="col-md-3"></div>
             <?php
+                        if (isset($_SESSION['steel_msg'])) {
+                            echo "<script>alert('".$_SESSION['steel_msg'] ."')</script>";
+                            unset($_SESSION['steel_msg']);
+                        }
+                        ?>
+            <?php
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
                 $sql = "SELECT * FROM ticket_tbl WHERE tic_id = '$id' LIMIT 1";
