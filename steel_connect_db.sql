@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2023 at 01:35 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Aug 28, 2023 at 03:14 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,50 @@ SET time_zone = "+00:00";
 --
 -- Database: `steel_connect_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `brochure_tbl`
+--
+
+CREATE TABLE `brochure_tbl` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `status` tinyint(4) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `brochure_tbl`
+--
+
+INSERT INTO `brochure_tbl` (`id`, `name`, `status`, `created_at`) VALUES
+(4, 'Advanced CSS.pdf', 1, '2023-08-28 10:21:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `confirm_ticket_tbl`
+--
+
+CREATE TABLE `confirm_ticket_tbl` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `mobile` varchar(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `tic_price` int(12) NOT NULL,
+  `tic_number` int(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `confirm_ticket_tbl`
+--
+
+INSERT INTO `confirm_ticket_tbl` (`id`, `name`, `mobile`, `email`, `tic_price`, `tic_number`, `created_at`) VALUES
+(1, 'ABC ', '8765432123', 'admin@gmail.com', 8259, 5389, '2023-08-28 11:39:49'),
+(2, 'ABC ', '8765432123', 'rohan@gmail.com', 58999, 5964, '2023-08-28 12:44:51');
 
 -- --------------------------------------------------------
 
@@ -49,6 +93,26 @@ INSERT INTO `contact_tbl` (`id`, `name`, `email`, `message`, `phone`, `address`,
 (6, 'ABC ', 'ashu@gmail.com', 'hello', '1234567890', '', 'EXHIBITION', '2023-08-18 13:26:25'),
 (7, 'navinn', 'rohan@gmail.com', 'cscss', '1234567890', 'bhillai ,25 ,street 5 x', 'DELEGATE', '2023-08-19 08:50:38'),
 (8, 'ABC Kumar', 'abc@gmail.com', 'ghcgthbbh jnhjgfghtgh', '9876543211', 'bhillai ,25 ,streeytdfzsdxgchvh buygv8765456tfyv ', 'DELEGATE', '2023-08-19 08:54:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `delegate_tbl`
+--
+
+CREATE TABLE `delegate_tbl` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `status` tinyint(4) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `delegate_tbl`
+--
+
+INSERT INTO `delegate_tbl` (`id`, `name`, `status`, `created_at`) VALUES
+(1, 'Advanced CSS.pdf', 1, '2023-08-28 10:08:28');
 
 -- --------------------------------------------------------
 
@@ -200,9 +264,27 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `status`, `created_at`) 
 --
 
 --
+-- Indexes for table `brochure_tbl`
+--
+ALTER TABLE `brochure_tbl`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `confirm_ticket_tbl`
+--
+ALTER TABLE `confirm_ticket_tbl`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact_tbl`
 --
 ALTER TABLE `contact_tbl`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `delegate_tbl`
+--
+ALTER TABLE `delegate_tbl`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -246,10 +328,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `brochure_tbl`
+--
+ALTER TABLE `brochure_tbl`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `confirm_ticket_tbl`
+--
+ALTER TABLE `confirm_ticket_tbl`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `contact_tbl`
 --
 ALTER TABLE `contact_tbl`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `delegate_tbl`
+--
+ALTER TABLE `delegate_tbl`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `img_tbl`
