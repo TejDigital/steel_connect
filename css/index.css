@@ -372,6 +372,7 @@
 }
 .home_schedule .timing_col {
     padding: 1rem;
+    margin-bottom: 144px;
     display: flex;
     align-items: center;
     justify-content: start;
