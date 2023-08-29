@@ -125,8 +125,8 @@ require('config/dbcon.php');
                                             </td>
                                             <td><?= $filds['cat_name'] ?></td>
                                             <td>
-                                                <a href=sponsor_edit.php?id=<?php echo $filds['spo_id']; ?> class='btn btn-info btn-sm '>Edit</a>
-                                                <button type='button' value=<?php echo $filds['spo_id']; ?> class='btn btn-danger delete_spo_btn btn-sm my-1'>Delete</button>
+                                                <a href=sponsor_edit.php?id=<?php echo $filds['spo_id']; ?> class='btn btn-info btn-sm '><i class="fa-solid fa-pen-to-square"></i></a>
+                                                <button type='button' value=<?php echo $filds['spo_id']; ?> class='btn btn-danger delete_spo_btn btn-sm my-1'><i class="fa-solid fa-trash"></i></button>
                                                 <!-- <a href=cus_details.php?cus_id=<?php echo $filds['spo_id']; ?> class='btn btn-info btn-sm'> View</a> -->
                                             </td>
                                             </tr>

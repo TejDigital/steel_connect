@@ -124,7 +124,7 @@ require('config/dbcon.php');
                                                 </td>
                                             <td>
                                                 <!-- <a href=delegate_edit.php?img_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm '>Edit</a> -->
-                                                <button type='button' value=<?php echo $filds['id']; ?> class='btn btn-danger delete_del_btn btn-sm my-1'>Delete</button>
+                                                <button type='button' value=<?php echo $filds['id']; ?> class='btn btn-danger delete_del_btn btn-sm my-1'><i class="fa-solid fa-trash"></i></button>
                                                 <!-- <a href=cus_details.php?cus_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm'> View</a> -->
                                             </td>
                                             </tr>

@@ -144,8 +144,8 @@ require('config/dbcon.php');
                                                 </td>
                                                 
                                                 <td>
-                                                    <a href=registered_edit.php?user_id=<?php echo$row['id'];?> class='btn btn-info btn-sm'> Edit</a>
-                                                    <button type='button' value=<?php echo$row['id'];?> class='btn btn-danger deletebtn btn-sm'>Delete</button>
+                                                    <a href=registered_edit.php?user_id=<?php echo$row['id'];?> class='btn btn-info btn-sm'><i class="fa-solid fa-pen-to-square"></i></a>
+                                                    <button type='button' value=<?php echo$row['id'];?> class='btn btn-danger deletebtn btn-sm'><i class="fa-solid fa-trash"></i></button>
                                                 </td>
 
                                           </tr>

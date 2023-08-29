@@ -593,16 +593,7 @@ require('./admin/config/dbcon.php');
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 p-2">
-                <div class="box">
-                    <div class="icon">
-                        <a href="#!"><i class="fa-regular fa-envelope"></i></a>
-                    </div>
-                    <div class="text">
-                        <p><a href="#!">steelconnect@gmail.com</a></p>
-                    </div>
-                </div>
-            </div>
+          
             <div class="col-md-4 p-2">
                 <div class="box">
                     <div class="icon">
@@ -610,6 +601,16 @@ require('./admin/config/dbcon.php');
                     </div>
                     <div class="text">
                         <p><a onclick="myloc()" style="cursor: pointer;">Office No 40, Palika Bazar, Bhilai, Dist : Durg (Chhattisgarh)</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2">
+                <div class="box">
+                    <div class="icon">
+                        <a href="#!"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <div class="text">
+                        <p class="mb-5"><a href="#!">steelconnect@gmail.com</a></p>
                     </div>
                 </div>
             </div>

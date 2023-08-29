@@ -118,9 +118,9 @@ require('config/dbcon.php');
                                                 <td><?= $data['phone'] ?></td>
                                                 <td><?= $data['email'] ?></td>
                                                 <td><?= $data['select_opt'] ?></td>
-                                                <td class="text-center"><a href="contact_view.php?cus_id=<?= $data['id'] ?>" class="btn btn-info btn-sm">View</a></td>
+                                                <td class="text-center"><a href="contact_view.php?cus_id=<?= $data['id'] ?>" class="btn btn-info btn-sm"><i class="fa-regular fa-eye"></i></a></td>
                                                 <!-- <td><a href="contact_edit.php?cus_id=<?= $data['id'] ?>" class="btn btn-primary btn-sm">Edit</a></td> -->
-                                                <td class="text-center"><button type='button' value=<?php echo $data['id']; ?> class='btn btn-danger delete_msg btn-sm'>Delete</button></td>
+                                                <td class="text-center"><button type='button' value=<?php echo $data['id']; ?> class='btn btn-danger delete_msg btn-sm'><i class="fa-solid fa-trash"></i></button></td>
                                             </tr>
                                     <?php
                                         }

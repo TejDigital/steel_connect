@@ -96,10 +96,10 @@ require('config/dbcon.php');
                                                 ?>
                                             </td>
                                             <td>
-                                                <a href=sponsor_category_edit.php?id=<?php echo $row['cat_id']; ?> class='btn btn-primary btn-sm '>Edit</a>
+                                                <a href=sponsor_category_edit.php?id=<?php echo $row['cat_id']; ?> class='btn btn-primary btn-sm '><i class="fa-solid fa-pen-to-square"></i></a>
                                             </td>
                                             <td>
-                                                <button type='button' value=<?php echo $row['cat_id']; ?> class='btn btn-danger delete_cat btn-sm my-1'>Delete</button>
+                                                <button type='button' value=<?php echo $row['cat_id']; ?> class='btn btn-danger delete_cat btn-sm my-1'><i class="fa-solid fa-trash"></i></button>
                                             </td>
                                             </tr>
                                     <?php
