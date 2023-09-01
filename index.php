@@ -9,17 +9,17 @@ require('./admin/config/dbcon.php');
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="img">
-                        <img src="images/steel_img_7.jpg" alt="">
+                        <img src="images/steel_img_10.jpg" alt="">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="img">
-                        <img src="images/steel_img_8.jpg" alt="">
+                        <img src="images/steel_img_11.jpg" alt="">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="img">
-                        <img src="images/steel_img_9.jpg" alt="">
+                        <img src="images/steel_img_12.jpg" alt="">
                     </div>
                 </div>
             </div>
