@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2023 at 03:14 PM
+-- Generation Time: Sep 06, 2023 at 10:57 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -53,6 +53,8 @@ CREATE TABLE `confirm_ticket_tbl` (
   `mobile` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
   `tic_price` int(12) NOT NULL,
+  `payment_status` varchar(10) NOT NULL,
+  `payment_id` varchar(100) NOT NULL,
   `tic_number` int(10) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -61,9 +63,18 @@ CREATE TABLE `confirm_ticket_tbl` (
 -- Dumping data for table `confirm_ticket_tbl`
 --
 
-INSERT INTO `confirm_ticket_tbl` (`id`, `name`, `mobile`, `email`, `tic_price`, `tic_number`, `created_at`) VALUES
-(1, 'ABC ', '8765432123', 'admin@gmail.com', 8259, 5389, '2023-08-28 11:39:49'),
-(2, 'ABC ', '8765432123', 'rohan@gmail.com', 58999, 5964, '2023-08-28 12:44:51');
+INSERT INTO `confirm_ticket_tbl` (`id`, `name`, `mobile`, `email`, `tic_price`, `payment_status`, `payment_id`, `tic_number`, `created_at`) VALUES
+(1, 'ABC Kumar', '1234567890', 'tejpratap.digitalshakha@gmail.com', 7079, 'complete', 'pay_MYjlIvD4eKuPT7', 3813, '2023-09-05 17:30:06'),
+(2, 'ashutosh', '1234567890', 'guptaashutosh957@gmail.com', 58999, 'complete', 'pay_MYvyMxrm7eME14', 2346, '2023-09-06 05:26:58'),
+(3, 'ashutosh', '8765432123', 'guptaashutosh957@gmail.com', 58999, 'complete', 'pay_MYw1grgkQX2wBV', 2346, '2023-09-06 05:30:03'),
+(4, 'ashutosh Gupta', '1234567890', 'guptaaashutosh957@gmail.com', 58999, 'complete', 'pay_MYw3h8E6BjD8W7', 2346, '2023-09-06 05:32:00'),
+(5, 'EARLY DELEGATE', '1234567890', 'tpsahu0711@gmail.com', 58999, 'complete', 'pay_MYw6E739vY4KL1', 2346, '2023-09-06 05:34:22'),
+(6, 'ABC Kumar', '1234567890', 'tejpratapsahu00@gmail.com', 58999, 'complete', 'pay_MYwBEnA4Q9vcw6', 3290, '2023-09-06 05:39:05'),
+(7, 'ashutosh', '1234567890', 'guptaaashutosh957@gmail.com', 58999, 'complete', 'pay_MYwCTklzcffHNb', 1476, '2023-09-06 05:40:18'),
+(8, 'ABC Kumar', '8765432123', 'aashutosh.digitalshakha@gmail.com', 58999, 'complete', 'pay_MYwG2gxdbkC7Cn', 2017, '2023-09-06 05:43:41'),
+(9, 'test id', '1234567890', 'tejpratapsahu00@gmail.com', 58999, 'complete', 'pay_MYwRIa1PTf81Oo', 4117, '2023-09-06 05:53:51'),
+(10, 'aashutosh test id', '9644477950', 'aashutosh.digitalshakha@gmail.com', 58999, 'complete', 'pay_MYwVj92eO6LzxZ', 3654, '2023-09-06 05:58:27'),
+(11, 'Saurabh Test Id', '9691699563', 'saurabhdeshmukh.pro@gmail.com', 58999, 'complete', 'pay_MYzCKdqdP1Iz8h', 3216, '2023-09-06 08:35:17');
 
 -- --------------------------------------------------------
 
@@ -92,7 +103,9 @@ INSERT INTO `contact_tbl` (`id`, `name`, `email`, `message`, `phone`, `address`,
 (5, 'ABC Kumar', 'abc@gmail.com', 'hello', '1234567890', '', 'EXHIBITION', '2023-08-18 04:33:49'),
 (6, 'ABC ', 'ashu@gmail.com', 'hello', '1234567890', '', 'EXHIBITION', '2023-08-18 13:26:25'),
 (7, 'navinn', 'rohan@gmail.com', 'cscss', '1234567890', 'bhillai ,25 ,street 5 x', 'DELEGATE', '2023-08-19 08:50:38'),
-(8, 'ABC Kumar', 'abc@gmail.com', 'ghcgthbbh jnhjgfghtgh', '9876543211', 'bhillai ,25 ,streeytdfzsdxgchvh buygv8765456tfyv ', 'DELEGATE', '2023-08-19 08:54:43');
+(8, 'ABC Kumar', 'abc@gmail.com', 'ghcgthbbh jnhjgfghtgh', '9876543211', 'bhillai ,25 ,streeytdfzsdxgchvh buygv8765456tfyv ', 'DELEGATE', '2023-08-19 08:54:43'),
+(9, 'home contact', 'home@gmail.com', 'new contact add  at hi=ome page', '0987890987', 'bhillai ,25 ,sdksdmlkmd kdnsjkdnl.dmsskdm,,imdksmdlkmdkldkdm', 'EXHIBITION', '2023-08-29 05:30:55'),
+(10, 'contact page', 'new@gmail.com', 'dsdsdssssxdsd', '0987654323', 'bhillai ,25 ,street 5 x', 'Other', '2023-08-29 05:32:09');
 
 -- --------------------------------------------------------
 
@@ -337,13 +350,13 @@ ALTER TABLE `brochure_tbl`
 -- AUTO_INCREMENT for table `confirm_ticket_tbl`
 --
 ALTER TABLE `confirm_ticket_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `contact_tbl`
 --
 ALTER TABLE `contact_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `delegate_tbl`
