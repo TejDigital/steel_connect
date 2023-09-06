@@ -57,7 +57,9 @@ require('./admin/config/dbcon.php');
 
             ?>
                         <div class="col-md-6">
-                            <form action="./admin/ticket_booking.php" method="post">
+                            <!-- <form action="./admin/ticket_booking.php" method="post"> -->
+                                <div><h1 id="responseMessage"></h1></div>
+                            <form id="ticketForm">
                                 <div class="box">
                                     <h1>Ticket <span>></span> Information <span>> Payment</span></h1>
                                     <div class="text_1 text_flex">
@@ -83,17 +85,17 @@ require('./admin/config/dbcon.php');
 
                                     <div class="contact">
                                         <h2>Contact</h2>
-                                        <input type="hidden" name="tol_price" value="<?= $totalAmount ?>">
-                                        <input type="hidden" name="tic_number" value="<?= $ticketNumber ?>">
+                                        <input type="hidden" id="amt" name="tol_price"  value="<?= $totalAmount ?>">
+                                        <input type="hidden" id="tic_number" name="tic_number" value="<?= $ticketNumber ?>">
                                         <div class="form-group">
-                                            <input type="text" class="input_area" name="name" placeholder="Name">
+                                            <input type="text" class="input_area" id="name" name="name" placeholder="Name" required>
                                         </div>
                                         <div class="form-group">
                                             <p id="msg_alert3" style="color:red;"></p>
-                                            <input type="tel" maxlength="10" onkeyup="validateNumber(this,'msg_alert3')" class="input_area" name="number" placeholder="Contact Number">
+                                            <input type="tel" maxlength="10" id="number" onkeyup="validateNumber(this,'msg_alert3')" class="input_area" name="number" placeholder="Contact Number" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="input_area" name="email" placeholder="Email Address">
+                                            <input type="email" class="input_area" id="email" name="email" placeholder="Email Address" required>
                                         </div>
 
                                         <div class="form-group flex_box">
@@ -101,7 +103,7 @@ require('./admin/config/dbcon.php');
                                         </div>
 
                                         <div class="form-group">
-                                            <button type="submit" name="booked" class="btn1">Continue to Book</button>
+                                            <button type="submit" id="booked" name="booked" class="btn1">Continue to Book</button>
                                         </div>
                                     </div>
                                 </div>

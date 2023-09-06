@@ -5,7 +5,7 @@ require('includes/topbar.php');
 require('includes/sidebar.php');
 require('config/dbcon.php');
 ?>
-<div class="content-wrapper" style="overflow-x: hidden;">
+<div class="content-wrapper" >
     <?php
     if (isset($_SESSION['alert_msg'])) {
     ?>
@@ -89,7 +89,7 @@ require('config/dbcon.php');
                             <!-- <input type="search" class="float-right input-group-text mx-2" placeholder="Search By Name"> -->
                         </div>
                         <div class="card-body ">
-                            <table id="example1" class="  table table-bordered table-striped">
+                            <table id="example1" class="  table table-bordered table-responsive table-striped">
                                 <thead>
                                     <tr>
                                         <th>S.No.</th>
@@ -98,6 +98,8 @@ require('config/dbcon.php');
                                         <th>Email</th>
                                         <th>Ticket number</th>
                                         <th>Ticket Price</th>
+                                        <th>Payment Status</th>
+                                        <th>Payment Id</th>
                                         <th colspan="2" class="text-center">Action</th>
                                     </tr>
                                 </thead>
@@ -116,6 +118,8 @@ require('config/dbcon.php');
                                             <td><?= $filds['email']?></td>
                                             <td><?= $filds['tic_number']?></td>
                                             <td><?= $filds['tic_price']?></td>
+                                            <td><?= $filds['payment_status']?></td>
+                                            <td><?= $filds['payment_id']?></td>
                                             <td class="text-center">
                                                 <!-- <a href=delegate_edit.php?img_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm '>Edit</a> -->
                                                 <!-- <a href=booking_details.php?cus_id=<?php echo $filds['id']; ?> class='btn btn-info btn-sm text-center'> View</a> -->
