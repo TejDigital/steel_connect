@@ -34,8 +34,8 @@ require('./admin/config/dbcon.php');
                         $gstRate = $result['tic_gst'] / 100;
                         $ticketPrice = $result['tic_price'];
 
+                        $tic_name= $result['tic_name'];
                         $gstAmount = $ticketPrice * $gstRate;
-
                         $totalAmount = $ticketPrice + $gstAmount;
                         // Get the ticket type ID from the URL parameter
                      
@@ -87,6 +87,7 @@ require('./admin/config/dbcon.php');
                                         <h2>Contact</h2>
                                         <input type="hidden" id="amt" name="tol_price"  value="<?= $totalAmount ?>">
                                         <input type="hidden" id="tic_number" name="tic_number" value="<?= $ticketNumber ?>">
+                                        <input type="hidden" id="tic_name" name="tic_name" value="<?= $tic_name ?>">
                                         <div class="form-group">
                                             <input type="text" class="input_area" id="name" name="name" placeholder="Name" required>
                                         </div>

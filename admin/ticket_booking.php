@@ -33,18 +33,19 @@ require('config/dbcon.php');
 //     // echo "<pre>";
 // }
 
-if (isset($_POST['name']) && isset($_POST['number']) && isset($_POST['email']) && isset($_POST['tol_price']) && isset($_POST['tic_number'])  ) {
+if (isset($_POST['name']) && isset($_POST['number']) && isset($_POST['email']) && isset($_POST['tol_price']) && isset($_POST['tic_number']) && isset($_POST['tic_name'])) {
     $name = $_POST['name'];
     $number = $_POST['number'];
     $email = $_POST['email'];
     $tol_price = $_POST['tol_price'];
     $tic_number = $_POST['tic_number'];
+    $tic_name = $_POST['tic_name'];
     $payment_status = "Pending";
 
     // print_r($_POST);
     // die();
 
-    $sql = "INSERT INTO confirm_ticket_tbl (name, mobile, email, tic_price, tic_number,payment_status) VALUES ('$name', '$number', '$email', '$tol_price', '$tic_number','$payment_status')";
+    $sql = "INSERT INTO confirm_ticket_tbl (name, mobile,tic_name, email, tic_price, tic_number,payment_status) VALUES ('$name', '$number', '$tic_name', '$email', '$tol_price', '$tic_number','$payment_status')";
     $query = mysqli_query($con, $sql);
     $_SESSION['PID'] = mysqli_insert_id($con);
 
@@ -54,11 +55,11 @@ if (isset($_POST['name']) && isset($_POST['number']) && isset($_POST['email']) &
         echo "failure";
     }
 }
-if(isset($_POST['payment_id']) && $_SESSION['PID']){
+if (isset($_POST['payment_id']) && $_SESSION['PID']) {
     $payment = $_POST['payment_id'];
     $payment_status = "complete";
-    $sql = "UPDATE confirm_ticket_tbl SET payment_id ='$payment' ,payment_status='$payment_status' where id= '".$_SESSION['PID']."'";
-    $query = mysqli_query($con,$sql);
+    $sql = "UPDATE confirm_ticket_tbl SET payment_id ='$payment' ,payment_status='$payment_status' where id= '" . $_SESSION['PID'] . "'";
+    $query = mysqli_query($con, $sql);
     if ($query) {
         echo "success";
     } else {

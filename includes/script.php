@@ -12,7 +12,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./js/main.js"></script>
 <script src="js/fancybox.min.js"></script>
-<script>
+<!-- <script>
     $("#booked").on("click", function(e) {
         e.preventDefault();
 
@@ -35,8 +35,8 @@
 
                         // Razorpay options
                         var options = {
-                            "key": "rzp_live_zTT9YMlkQS43qv",
-                            "amount": 1 * 100,
+                            "key": "rzp_test_XDMvHbISe3Ffrd",
+                            "amount": amount * 100,
                             "currency": "INR",
                             "name": "Steel Connect",
                             "description": "Test Transaction",
@@ -58,22 +58,40 @@
                                     success: function(processResponse) {
                                         // console.log("Payment processed on the server:", processResponse);
                                         $.ajax({
-                                            method: "POST",
+                                            method: "GET",
                                             url: "./admin/receipt.php", // Replace with the URL to your payment processing script
                                             data: {
                                                 payment_id: paymentId
                                             },
-                                            success: function(NewResponse) {
-                                                if(NewResponse == "success"){
-                                                    console.log("Email Send:");
-                                                }else{
-                                                    console.log("Email Not send :");
+                                            success: function(Newresponse, textStatus, xhr) {
+                                                // Check if the response is JSON
+                                                if (xhr.getResponseHeader('content-type').indexOf('application/json') !== -1) {
+                                                    try {
+                                                        var data = JSON.parse(Newresponse);
+                                                        if (data.status === "success") {
+                                                            // Handle successful response here
+                                                            console.log("Payment successful.");
+                                                            console.log("User ID:", data.user.id);
+                                                            window.location.href = "./admin/receipt.php?id=" + data.user.id;
+                                                        } else {
+                                                            console.log("Payment not successful.");
+                                                            // Handle the case where payment failed
+                                                        }
+                                                    } catch (error) {
+                                                        console.error("Error parsing JSON:", error);
+                                                        // Handle the error, e.g., display an error message to the user
+                                                    }
+                                                } else {
+                                                    console.error("Invalid content type:", xhr.getResponseHeader('content-type'));
+                                                    // Handle the case where the response is not JSON (e.g., display an error message)
                                                 }
                                             },
+
                                             error: function(xhr, status, error) {
                                                 console.error("Payment processing error:", xhr.responseText);
                                             }
                                         });
+
                                     },
                                     error: function(xhr, status, error) {
                                         console.error("Payment processing error:", xhr.responseText);
@@ -310,11 +328,322 @@
     // function clearInput() {
     //     form1.reset();
     // }
-</script>
+</script> -->
+<!-- <script>
+    $("#booked").on("click", function(e) {
+        e.preventDefault();
+
+        var formData = $("#ticketForm").serialize();
+        var amount = $("#amt").val(); // Get the amount from the form
+        var name = $("#name").val(); // Get the name from the form
+        var email = $("#email").val(); // Get the email from the form
+        var contact = $("#number").val(); // Get the contact from the form
+        var tic_number = $("#tic_number").val(); // Get the ticket number from the form
+
+        if (name.trim() !== "" && email.trim() !== "" && contact.trim() !== "") {
+
+            $.ajax({
+                method: "POST",
+                url: "./admin/ticket_booking.php",
+                data: formData,
+                success: function(response) {
+                    if (response === "success") {
+                        // Form submission was successful, proceed to Razorpay payment
+
+                        // Razorpay options
+                        var options = {
+                            "key": "rzp_live_zTT9YMlkQS43qv",
+                            "amount": 1 * 100,
+                            "currency": "INR",
+                            "name": "Steel Connect",
+                            "description": "Test Transaction",
+                            "image": "../images/logo_1.svg",
+                            "handler": function(response) {
+                                // Handle the successful payment here
+                                var paymentId = response.razorpay_payment_id;
+                                // You can send the payment ID to your server for further processing
+                                // console.log("Payment successful with ID: " + paymentId);
+                                // Display a success message to the user
+                                window.alert("Payment successful with ID: " + paymentId + " Check Your Mail For Your Ticket Detail");
+
+                                $.ajax({
+                                    method: "POST",
+                                    url: "./admin/ticket_booking.php",
+                                    data: {
+                                        payment_id: paymentId
+                                    },
+                                    success: function(processResponse) {
+                                        // console.log("Payment processed on the server:", processResponse);
+                                        // Redirect to the receipt page
+                                        // window.location.href = "./admin/receipt.php?id=" + paymentId;
+                                        $.ajax({
+                                            method: "GET",
+                                            url: "./admin/receipt.php",
+                                            data: {
+                                                payment_id: paymentId
+                                            },
+                                            success: function(processResponse) {
+                                                // console.log("Payment processed on the server:", processResponse);
+                                                // Redirect to the receipt page
+                                                window.location.href = "./admin/receipt.php?id=" + paymentId;
+                                                // console.log(paymentId);
+                                            },
+                                            error: function(xhr, status, error) {
+                                                console.error("Payment processing error:", xhr.responseText);
+                                            }
+                                        });
+                                        // console.log(paymentId);
+                                    },
+                                    error: function(xhr, status, error) {
+                                        console.error("Payment processing error:", xhr.responseText);
+                                    }
+                                });
+                            },
+                            "prefill": {
+                                "name": name,
+                                "email": email,
+                                "contact": contact
+                            },
+                            "notes": {
+                                "ticketNumber": tic_number,
+                                "tol_price": amount
+                            }
+                        };
+
+                        var rzp1 = new Razorpay(options);
+
+                        // Open the Razorpay payment modal
+                        rzp1.open();
+                    } else {
+                        // Form submission failed
+                        window.alert("failed. Try again.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+            clearInput();
+        } else {
+            window.alert('all fields are required')
+        }
+        // Reset the form
+    });
+
+    function clearInput() {
+        document.getElementById('ticketForm').reset();
+    }
+</script> -->
+<!-- <script>
+    $("#booked").on("click", function(e) {
+        e.preventDefault();
+
+        var formData = $("#ticketForm").serialize();
+        var amount = $("#amt").val(); // Get the amount from the form
+        var name = $("#name").val(); // Get the name from the form
+        var email = $("#email").val(); // Get the email from the form
+        var contact = $("#number").val(); // Get the contact from the form
+        var tic_number = $("#tic_number").val(); // Get the ticket number from the form
+
+        if (name.trim() !== "" && email.trim() !== "" && contact.trim() !== "") {
+
+            $.ajax({
+                method: "POST",
+                url: "./admin/ticket_booking.php",
+                data: formData,
+                success: function(response) {
+                    if (response === "success") {
+                        // Form submission was successful, proceed to Razorpay payment
+
+                        // Razorpay options
+                        var options = {
+                            "key": "rzp_test_XDMvHbISe3Ffrd",
+                            "amount": 1 * 100,
+                            "currency": "INR",
+                            "name": "Steel Connect",
+                            "description": "Test Transaction",
+                            "image": "../images/logo_1.svg",
+                            "handler": function(response) {
+                                // Handle the successful payment here
+                                var paymentId = response.razorpay_payment_id;
+                                // You can send the payment ID to your server for further processing
+                                // console.log("Payment successful with ID: " + paymentId);
+                                // Display a success message to the user
+                                window.alert("Payment successful with ID: " + paymentId + "Check Your Mail For Your Ticket Detail");
+
+                                $.ajax({
+                                    method: "POST",
+                                    url: "./admin/ticket_booking.php",
+                                    data: {
+                                        payment_id: paymentId
+                                    },
+                                    success: function(processResponse) {
+                                        // console.log("Payment processed on the server:", processResponse);
+                                        $.ajax({
+                                            method: "POST",
+                                            url: "./admin/receipt.php", // Replace with the URL to your payment processing script
+                                            data: {
+                                                payment_id: paymentId
+                                            },
+                                            success: function(NewResponse) {
+                                                if(NewResponse == "success"){
+                                                    console.log("Email Send:");
+                                                }else{
+                                                    console.log("Email Not send :");
+                                                }
+                                            },
+                                            error: function(xhr, status, error) {
+                                                console.error("Payment processing error:", xhr.responseText);
+                                            }
+                                        });
+                                    },
+                                    error: function(xhr, status, error) {
+                                        console.error("Payment processing error:", xhr.responseText);
+                                    }
+                                });
+                                // window.location.href = "./admin/receipt.php";
+
+                            },
+                            "prefill": {
+                                "name": name,
+                                "email": email,
+                                "contact": contact
+                            },
+                            "notes": {
+                                "ticketNumber": tic_number,
+                                "tol_price": amount
+                            }
+                        };
+
+                        var rzp1 = new Razorpay(options);
+
+                        // Open the Razorpay payment modal
+                        rzp1.open();
+                    } else {
+                        // Form submission failed
+                        window.alert("failed. Try again.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+            clearInput();
+        } else {
+            window.alert('all fields are required')
+        }
+        // Reset the form
+    });
+
+    function clearInput() {
+        document.getElementById('ticketForm').reset();
+    }
+</script> -->
 <script>
+    $(document).ready(function () {
+    $("#booked").on("click", function (e) {
+        e.preventDefault();
+
+        var formData = $("#ticketForm").serialize();
+        var amount = $("#amt").val();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var contact = $("#number").val();
+        var tic_number = $("#tic_number").val();
+        var tic_name = $("#tic_name").val();
+
+        // console.log(tic_name);
+
+        if (name.trim() !== "" && email.trim() !== "" && contact.trim() !== "") {
+            $.ajax({
+                method: "POST",
+                url: "./admin/ticket_booking.php",
+                data: formData,
+                success: function (response) {
+                    if (response === "success") {
+                        // Form submission was successful, proceed to Razorpay payment
+
+                        // Razorpay options
+                        var options = {
+                            "key": "rzp_live_zTT9YMlkQS43qv",
+                            "amount": 1 * 100, // Convert amount to the smallest currency unit (e.g., cents)
+                            "currency": "INR",
+                            "name": "Steel Connect",
+                            "description": "Test Transaction",
+                            "image": "../images/logo_1.svg",
+                            "handler": function (response) {
+                                var paymentId = response.razorpay_payment_id;
+
+                                // Display a success message to the user
+                                window.alert("Payment successful with ID: " + paymentId + " Check Your Mail For Your Ticket Detail");
+
+                                // Send the payment ID to your server
+                                $.ajax({
+                                    method: "POST",
+                                    url: "./admin/ticket_booking.php",
+                                    data: {
+                                        payment_id: paymentId
+                                    },
+                                    success: function (processResponse) {
+                                        $.ajax({
+                                            method: "POST",
+                                            url: "./admin/makepdf.php", // Corrected URL for generating PDF
+                                            data: {
+                                                payment_id: paymentId
+                                            },
+                                            success: function (emailResponse) {
+                                                if (emailResponse === "success") {
+                                                    console.log("Email Sent :" + emailResponse);
+                                                } else {
+                                                    console.log("Email Not Sent:"+ emailResponse);
+                                                }
+                                            },
+                                            error: function (xhr, status, error) {
+                                                console.error("Email sending error:", xhr.responseText);
+                                            }
+                                        });
+                                    },
+                                    error: function (xhr, status, error) {
+                                        console.error("Payment processing error:", xhr.responseText);
+                                    }
+                                });
+                            },
+                            "prefill": {
+                                "name": name,
+                                "email": email,
+                                "contact": contact
+                            },
+                            "notes": {
+                                "ticketNumber": tic_number,
+                                "tol_price": amount
+                            }
+                        };
+
+                        var rzp1 = new Razorpay(options);
+
+                        // Open the Razorpay payment modal
+                        rzp1.open();
+                    } else {
+                        // Form submission failed
+                        window.alert("failed. Try again.");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+            clearInput();
+        } else {
+            window.alert('all fields are required')
+        }
+    });
+
+    function clearInput() {
+        document.getElementById('ticketForm').reset();
+    }
+});
 
 </script>
-
 </body>
 
 </html>
